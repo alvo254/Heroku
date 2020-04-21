@@ -74,16 +74,22 @@ background-color: #5D4954;
         overflow-x: hidden;
     }
     .nav-links{
-        position: absolute;
+        #position: absolute;
         right: 0px;
-        height: 92vh;
+        height: 20vh;
         top: 8vh;
-        background-color: #5D4954
+        background-color: #5D4954;
         display: flex;
         flex-direction: column;
+<<<<<<< HEAD
         align-items: right;
         width: 50%;
         transform : translateX(100%);
+=======
+        align-items: left;
+        width: 30%;
+        transform: translateY(100%);
+>>>>>>> ff202510c301fbc34d1ea70d6f8bb7accf5431c4
         transition: transform 0.5s ease-in;
     }
     .nav-links li{
