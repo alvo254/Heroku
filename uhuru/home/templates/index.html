@@ -5,7 +5,7 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 	<head>
 		<title>Uhuru</title>
 		<meta charset="utf-8" />
@@ -14,23 +14,33 @@
 		<link rel="stylesheet" href="{% static '/css/styles.css' %}" />
 	</head>
 	<body id="top">
-		<header class="'header">
+		<header class="header">
 			<nav>
 				<div class="logo">
 					<h4>Uhuru</h4>
 				</div>
 								<ul class="nav-links">
-									<li class="active"><a href="index.html">Home</a></li>
-									<li><a href="about.html">About us</a></li>
-									<li><a href="#">Services</a></li>
-									<li><a href="news.html">News</a></li>
-									<li><a href="contact.html">Contact</a></li>
+									<li>
+										<a href="index.html">Home</a>
+									</li>
+									<li>
+										<a href="about.html">About us</a>
+									</li>
+									<li>
+										<a href="#">Services</a>
+									</li>
+									<li>
+										<a href="news.html">News</a>
+									</li>
+									<li>
+										<a href="contact.html">Contact</a>
+									</li>
 								</ul>
 
 				<div class="burger">
 					<div class="line1"></div>
-					<div class="2"></div>
-					<div class="3"></div>
+					<div class="line2"></div>
+					<div class="line3"></div>
 
 				</div>
 			</nav>
@@ -44,19 +54,17 @@
 			-->
 				<section id="banner" data-video='{% static "images/back.jpg" %}' style="background-image: url('{% static "images/back.jpg" %}')">
 
-					<div class="inner" >
-						<header>
-							<h1>Uhuru</h1>
-							<p>A media hub for all uplifting content<br/>
+						<div class="inner" >
+							<header>
+								<h1>Uhuru</h1>
+								<p>A media hub for all uplifting content<br/>
 
-						<a href="#main" class="more">Learn More</a>
-						</header>
-					</div>
+							<a href="#main" class="more">Learn More</a>
+							</header>
+						</div>
 				</section>
 
-			<!-- Main -->
-
-				<div id="main">
+		<div id="main">
 					<div class="inner">
 
 					<!-- Boxes -->
@@ -190,7 +198,7 @@
 			<script src="{% static '/js/skel.min.js' %}"></script>
 			<script src="{% static '/js/util.js' %}"></script>
 			<script src="{% static '/js/main.js' %}"></script>
-			<script src="{% static '/js/app.js' %}"></script>
+<!--			<script src="{% static '/js/app.js' %}"></script>-->
 
 	</body>
 </html>
