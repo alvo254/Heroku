@@ -64,15 +64,18 @@ background-color: #5D4954;
 }
 
 @media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
     .nav-links{
-        position: absolute;
+        #position: absolute;
         right: 0px;
-        height: 92vh;
+        height: 20vh;
         top: 8vh;
-        background-color: #5D4954
+        background-color: #5D4954;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: left;
         width: 30%;
         transform: translateY(100%);
         transition: transform 0.5s ease-in;
