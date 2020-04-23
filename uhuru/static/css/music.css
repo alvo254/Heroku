@@ -1,0 +1,164 @@
+/*
+* {
+    box-sizing: border-box;
+    font-family: 'lato', sans-serif;
+    list-style: none;
+}
+*/
+/*hero section *//*
+
+*/
+/*.banner{
+    image-height: 100%;
+    width: 100%;
+    height: 120vh;
+}*//*
+
+
+.banner {
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		padding: 8em 4em 6em 4em;
+		min-height: 80vh;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-height; 80vh;
+		border-top: 0;
+		position: relative;
+		text-align: center;
+		overflow: hidden;
+	}
+.banner-content{
+    color: #fff;
+    width: 55%;
+    padding-top; 170px;
+
+}
+
+.banner-content span{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 3px;
+
+}
+body{
+background-color: black;
+}
+.banner-content h1 {
+    margin-bottom; 10px;
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-family: sans-serif;
+    color: white;
+}
+
+.banner-content p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+.banner-content a {
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.banner-content .btn-one{
+    padding: 10px 30px;
+    background-color: rgba(0,0,0,0.3);
+    border: 2px solid #fff;
+    border-radius: 201px;
+    font-size: 18px;
+    from-style: italic;
+    color: #fff;
+}
+
+.banner-content .btn-two{
+    padding: 10px 30px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 201px;
+    font-size: 18px;
+    from-style: italic;
+    color: #000;
+}
+
+
+
+.banner-content .btn-one:hover{
+    background-color: #fff;
+    border: 2px solid #000;
+    color: #000;
+}
+.banner-content .btn-two:hover{
+    background-color: #000;
+    border: 2px solid #fff;
+    color: #fff;
+}
+*/
+*{
+    font-family: ' Proxima Nova';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    boxface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+body{
+    width:100%;
+    height: 100vh;
+
+
+}
+
+
+.ta-app-wrapper {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right,#2F3B49 10%, #0F1014)
+}
+
+aside {
+    width: 300px;
+    height: 100%;
+    background-color: red;
+    padding: 20px;
+
+    ul{
+        list-style-type: none;
+        li {
+           a {
+           font-size: 30px;
+           text-decoration: none;
+           }
+        }
+    }
+}
+a{
+text-decoration: none;
+display: flex;
+align-items: center;
+
+}
+
+.material-icons {
+margin-right: 10px;
+}
+li{
+    list-style: none
+}
