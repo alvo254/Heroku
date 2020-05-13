@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" ></script>
 
     <style>
         .topnav {
@@ -30,22 +31,6 @@
 </head>
 <body>
 
-<!--Hero section-->
-<!--<div class="banner" style="background-image: url('{% static "/images/music.png" %}')">-->
-<!--    <div class="container">-->
-<!--        <div class="banner-content">-->
-<!--            <span>MUSIC GALLORE</span>-->
-<!--            <h1>BRAND NEW</h1>-->
-<!--            <p>Here is where we are uploading our music. We expect to have an explore page. We want guys to be able to listen to their type of music</p>-->
-<!--            <a href="#" class="btn-one">Top music</a>-->
-<!--            <a href="#" class="btn-two">Favourites</a>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
-<!--    <div id="grad1">-->
-
-<!--    </div>-->
 
 
         <div class="topnav">
@@ -321,21 +306,7 @@
                 <a href="" class="username">Kanye  West</a>
 
             </div>
-<!--            <div class="card-stats">-->
-<!--        <div class="stat">-->
-<!--          <div class="value">4<sup>m</sup></div>-->
-<!--          <div class="type">read</div>-->
-<!--        </div>-->
-<!--        <div class="stat border">-->
-<!--          <div class="value">5123</div>-->
-<!--          <div class="type">views</div>-->
-<!--        </div>-->
-<!--        <div class="stat">-->
-<!--          <div class="value">32</div>-->
-<!--          <div class="type">comments</div>-->
-<!--            <a href="#">Lifted</a>-->
-<!--        </div>-->
-<!--      </div>-->
+
     </div>
 
 
@@ -348,6 +319,22 @@
     </div>
 
 
-
 </body>
+
+
+<!--    <script src="{% static '/js/app.js' %}"></script>-->
+<script>
+ $(window).scroll(function(){
+        didScroll = true;
+        var scroll = $(window).scrollTop(),
+        dh = $(document).height(),
+        wh = $(window).height();
+        scrollPercent = (scroll / (dh-wh)) * 100;
+        $('#progressbar').css('height', scrollPercent + '%');
+        console.log('it works');
+        })
+
+
+
+</script>
 </html>

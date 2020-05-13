@@ -14,8 +14,35 @@ body{
     width:100%;
     height: 100vh;
 
-
 }
+
+/*::-webkit-scrollbar {
+    width:5px;
+}
+#progressbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to top, #fcb045, #fd1d1d, #833ab4);
+}*/
+ ::-webkit-scrollbar{
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb{
+
+    background: linear-gradient(transparent, #00c6ff);
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover{
+
+    background: linear-gradient(transparent, #30ff00);
+
+  }
 
 
 .ta-app-wrapper {
