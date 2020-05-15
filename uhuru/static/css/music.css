@@ -16,18 +16,7 @@ body{
 
 }
 
-/*::-webkit-scrollbar {
-    width:5px;
-}
-#progressbar{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 15px;
-    height: 100%;
-    border-radius: 10px;
-    background: linear-gradient(to top, #fcb045, #fd1d1d, #833ab4);
-}*/
+
  ::-webkit-scrollbar{
     width: 5px;
   }
@@ -65,7 +54,8 @@ body{
    }
 
  .ta-app-wrapper .cards {
-display: flex;
+display: flex; linear-gradient(to bottom right,#2F3B49 10%, #0F1014);
+background-color:
 flex-align: center;
 overflow-y: auto;
 grid-gap: 30px;
@@ -102,6 +92,22 @@ section.right {
 
 }
 
+.top1{
+    float: right;
+    display: flex;
+    flex-direction: column;
+    flex-justify:end;
+}
+
+.top{
+    position: sticky;
+    padding: 0;
+}
+.ta-stat-board {
+    margin: 0;
+    padding: 0;
+    }
+
 .ta-stat-tracks{
  margin-top:-10px;
  overflow: hidden;
@@ -116,6 +122,7 @@ section.right {
     flex-align: center;
     width: 100%;
     flex-direction: row;
+
 
 }
 
@@ -142,12 +149,13 @@ section.right {
     overflow: hidden;
     white-space: nowrap;
     font-size: 14px;
+    margin-left: 2
 
 
 }
  .card-stat a {
-    margin-right: 100px;
-    margin-left: 15px;
+    margin-right: 120px;
+    margin-left: 20px;
     white-space: nowrap;
     overflow: hidden;
     font-size: 16px;
@@ -156,7 +164,7 @@ section.right {
 }
 
 .card-stat a+a {
-  margin-left: 2px;
+  margin-left: -4em;
 
 }
 
@@ -168,7 +176,7 @@ section.right {
 
 }
 li.stat{
-    margin-left: 170px;
+    margin-left: 120px;
 
 }
 li#stat1{
@@ -218,15 +226,14 @@ span{
 }
 .card {
   display: grid;
-
   grid-template-columns: 200px;
   grid-template-rows: 210px; 3px; 10px;
-  height: 250px;
-  width: 200px;
+  height: 200px;
+  width: 150px;
   grid-template-areas: "image" "text"  "stats";
   border-radius: 18px;
-  grid-space: 20px
-  background: white;
+  grid-space: 20px;
+  background-color: rgba(0, 0, 8, 0.2);
   box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
   font-family: roboto;
   text-align: center;
@@ -250,6 +257,7 @@ span{
   margin: 1px;
   text-align: left;
   padding: 2px;
+
 }
 
 .card-text .username {
