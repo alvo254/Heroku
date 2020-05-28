@@ -18,3 +18,7 @@ def blog(request):
 
 def about(request):
     return render(request, template_name='about.html')
+
+
+def misc(request):
+    return render(request, template_name='misc.html')
