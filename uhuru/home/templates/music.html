@@ -1,300 +1,674 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Music</title>
-    <link rel="stylesheet" href="{% static '/css/music.css' %}">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static '/css/music.css' %}" />
+    <!-- ! NEW CODE SNIPPET -->
+    <link rel="stylesheet" href="{% static '/css/all.min.css' %}" />
+    <!-- <link
+      rel="stylesheet"
+      href="{% static '/css/jp music/jp music player.css' %}"
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
 
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js" ></script>
+    <!-- ! NEW CODE SNIPPET -->
+    <script src="{% static '/js/jp music/jquery.min.js' %}"></script>
+    <script src="{% static '/js/jp music/jquery.jplayer.min.js' %}"></script>
+    <script src="{% static '/js/jp music/jplayer.playlist.min.js' %}"></script>
+    <script src="{% static '/js/jp music/jp music player.js' %}"></script>
 
     <style>
-        .topnav {
-            width: calc(100% - 275px);
-            height: 75px;
-            background-color: rgba(0, 0, 8, 0.2);
-            position: fixed;
-            right: 0;
-            top: 0;
-            align-items: center;
-        }
-
-
-
-
-
+      .topnav {
+        width: calc(100% - 275px);
+        height: 75px;
+        background-color: rgba(0, 0, 8, 0.2);
+        position: fixed;
+        right: 0;
+        top: 0;
+        align-items: center;
+      }
     </style>
+  </head>
+  <body>
+    <!-- <audio controls="controls">
+      <source src="{{ home.song.url }}" type="audio/mp3" />
+      <source src="{{ song.audio_file.url }}" type="audio/mp3" />
+      <source src="{{ song.audio_file.url }}" type="audio/wp3" />
+      Your browser does not support the audio element.
+    </audio> -->
 
-</head>
-<body>
-
-<audio controls="controls">
-                                        <source src="{{ home.song.url }}" type="audio/mp3" />
-                                        <source src="{{ song.audio_file.url }}" type="audio/mp3" />
-                                        <source src="{{ song.audio_file.url }}" type="audio/wp3" />
-                                      Your browser does not support the audio element.
-                                      </audio>
-
-        <div class="topnav">
-            <div style="color:white; margin-right: 15px; float:left; padding:32px 14px; margin-left; 15px">Search</div>
-        </div>
-        <aside>
-            <ul class="links">
-                <div class="bread">Music</div>
-                <li><a href="#" class="active"><span class="material-icons">explore</span>Explore</a></li>
-                <li><a href="#"><ion-icon name="musical-notes"></ion-icon>Songs</a></li>
-                <li><a href="#"><span class="material-icons">library_music</span>Albums</a></li>
-                <li><a href="#"><span class="material-icons">grade</span>Trending</a></li>
-                <li><a href="#"><span class="material-icons">favorite</span>Liked</a></li>
-            </ul>
-
-            <ul class="links">
-                <div class="bread">My Playlist</div>
-                <li><a href="#"><span class="material-icons">queue_music</span>List 1</a></li>
-                <li><a href="#"><span class="material-icons">queue_music</span>List 2</a></li>
-                <li><a href="#"><span class="material-icons">queue_music</span>List 3</a></li>
-
-
-            </ul>
-        </aside>
-    <div class="ta-app-wrapper" style="padding-top: 75px; padding-left: 275px;">
-        <div class="ta-app">
-            <div class="top1 column col-6">
-                <h1 class="title">Mood for today</h1>
-                 <section class="right" >
-                     <a href="" class="show">Show all</a>
-                    <button><span class="material-icons">keyboard_arrow_left</span></button>
-                    <button><span class="material-icons">keyboard_arrow_right</span></button>
-                </section>
-
-                <div class="flex" style="flex-direction:column;" >
-                    <a href="" style="background: red; width:100%;">qwe</a>
-                    <a href="" style="background: red; width:100%;">qwe</a>
-                </div>
-
-
-            </div>
-            <div class="top column col-6">
-            <h1 class="title">Weekly Chart</h1>
-         <section class="right" >
-             <a href="" class="show">Show all</a>
-            <button><span class="material-icons">keyboard_arrow_left</span></button>
-            <button><span class="material-icons">keyboard_arrow_right</span></button>
-        </section>
-
-        <div class="ta-stat-board align-top" style="clear:both;">
-            <ul>
-            <li>#</li>
-            <li id="stat1">Title</li>
-            <li class="stat">Artist</li>
-            <li class="stat">Album</li>
-
-            </ul>
-
-            <div class="ta-stat-tracks" style="clear:both;" >
-
-
-            <div class="stat-image" style="background-image: url(https://i1.sndcdn.com/artworks-000147165684-3hzdwx-t500x500.jpg);"></div>
-            <div class="card-stat" >
-                <a href="" class="title">Love Awakens</a>
-                <a href="" class="username">Kanye  West</a>
-                <a href="" class="username">Jesus is King</a>
-
-
-            </div>
-
-
-            </div>
-            <div class="ta-stat-tracks" style="clear:both;" >
-
-
-            <div class="stat-image" style="background-image: url(https://i1.sndcdn.com/artworks-000147165684-3hzdwx-t500x500.jpg);"></div>
-                <div class="card-stat" >
-                <a href="" class="title">Love Awakens</a>
-                <a href="" class="username">Kanye  West</a>
-                <a href="" class="username">Jesus is King</a>
-
-
-            </div>
-
-            </div>
-            <div class="ta-stat-tracks" style="clear:both;" >
-
-
-            <div class="stat-image" style="background-image: url(https://i1.sndcdn.com/artworks-000147165684-3hzdwx-t500x500.jpg); "></div>
-               <div class="card-stat" >
-                <a href="" class="title">Love Awakens</a>
-                <a href="" class="username">Kanye  West</a>
-                <a href="" class="username">Jesus is King</a>
-
-
-            </div>
-
-
-            </div>
-        </div>
-
-
-
-        </div>
-
-
-        <h1 class="title">Recently Added</h1>
-        <section class="right" >
-             <a href="" class="show">Show all</a>
-            <button><span class="material-icons">keyboard_arrow_left</span></button>
-            <button><span class="material-icons">keyboard_arrow_right</span></button>
-        </section>
-
-
-
-        <div class="cards grid-container">
-
-        <div class="card">
-            <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-000147165684-3hzdwx-t500x500.jpg); background-size: cover; width:100%; height:100%;"></div>
-            <div class="card-text">
-                <a href="" class="title">Love Awakens</a>
-                <a href="" class="username">Kanye  West</a>
-
-            </div>
-
-    </div>
-        <div class="card">
-            <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-mFszANGYblsfYsSu-dkuvLA-t500x500.jpg); background-size: cover; width:100%; height:100%;"></div>
-            <div class="card-text">
-                <a href="" class="title">Love Awakens</a>
-                <a href="" class="username">Kanye  West</a>
-
-            </div>
-
-    </div>
-        <div class="card">
-            <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-mFszANGYblsfYsSu-dkuvLA-t500x500.jpg); background-size: cover; width:100%; height:100%;"></div>
-            <div class="card-text">
-                <a href="" class="title">Love Awakens</a>
-                <a href="" class="username">Kanye  West</a>
-
-            </div>
-
-    </div>
-        <div class="card">
-            <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-mFszANGYblsfYsSu-dkuvLA-t500x500.jpg); background-size: cover; width:100%; height:100%;"></div>
-            <div class="card-text">
-                <a href="" class="title">Love Awakens</a>
-                <a href="" class="username">Kanye  North</a>
-
-            </div>
-
-    </div>
-
-
-
-        </div>
-        <h1 class="title">Trending</h1>
-          <section class="right" >
-             <a href="" class="show">Show all</a>
-            <button><span class="material-icons">keyboard_arrow_left</span></button>
-            <button><span class="material-icons">keyboard_arrow_right</span></button>
-        </section>
-
-         <div class="cards grid-container">
-
-        <div class="card">
-            <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-000147165684-3hzdwx-t500x500.jpg); background-size: cover; width:100%; height:100%;"></div>
-            <div class="card-text">
-                <a href="" class="title">Love Awakens</a>
-                <a href="" class="username">Kanye  West</a>
-
-            </div>
-<!--            <div class="card-stats">-->
-<!--        <div class="stat">-->
-<!--          <div class="value">4<sup>m</sup></div>-->
-<!--          <div class="type">read</div>-->
-<!--        </div>-->
-<!--        <div class="stat border">-->
-<!--          <div class="value">5123</div>-->
-<!--          <div class="type">views</div>-->
-<!--        </div>-->
-<!--        <div class="stat">-->
-<!--          <div class="value">32</div>-->
-<!--          <div class="type">comments</div>-->
-<!--            <a href="#">Lifted</a>-->
-<!--        </div>-->
-<!--      </div>-->
-    </div>
-        <div class="card">
-            <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-mFszANGYblsfYsSu-dkuvLA-t500x500.jpg); background-size: cover; width:100%; height:100%;"></div>
-            <div class="card-text">
-                <a href="" class="title">Love Awakens</a>
-                <a href="" class="username">Kanye  North</a>
-
-            </div>
-<!--            <div class="card-stats">-->
-<!--        <div class="stat">-->
-<!--          <div class="value">4<sup>m</sup></div>-->
-<!--          <div class="type">read</div>-->
-<!--        </div>-->
-<!--        <div class="stat border">-->
-<!--          <div class="value">5123</div>-->
-<!--          <div class="type">views</div>-->
-<!--        </div>-->
-<!--        <div class="stat">-->
-<!--          <div class="value">32</div>-->
-<!--          <div class="type">comments</div>-->
-<!--            <a href="#">Lifted</a>-->
-<!--        </div>-->
-<!--      </div>-->
-    </div>
-        <div class="card">
-            <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-mFszANGYblsfYsSu-dkuvLA-t500x500.jpg); background-size: cover; width:100%; height:100%;"></div>
-            <div class="card-text">
-                <a href="" class="title">Love Awakens</a>
-                <a href="" class="username">Kanye  West</a>
-
-            </div>
-<!--            <div class="card-stats">-->
-<!--        <div class="stat">-->
-<!--          <div class="value">4<sup>m</sup></div>-->
-<!--          <div class="type">read</div>-->
-<!--        </div>-->
-<!--        <div class="stat border">-->
-<!--          <div class="value">5123</div>-->
-<!--          <div class="type">views</div>-->
-<!--        </div>-->
-<!--        <div class="stat">-->
-<!--          <div class="value">32</div>-->
-<!--          <div class="type">comments</div>-->
-<!--            <a href="#">Lifted</a>-->
-<!--        </div>-->
-<!--      </div>-->
-    </div>
-        <div class="card">
-            <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-mFszANGYblsfYsSu-dkuvLA-t500x500.jpg); background-size: cover; width:100%; height:100%"></div>
-            <div class="card-text">
-                <a href="" class="title">Love Awakens</a>
-                <a href="" class="username">Kanye  West</a>
-
-            </div>
-
-    </div>
-
-
-        </div>
-
-
-        <span style="background-image: url(&quot;https://i1.sndcdn.com/artworks-000147165684-3hzdwx-t500x500.jpg&quot;); width: 100%; height: 100%; opacity: 1;" class="sc-artwork sc-artwork-placeholder-10  image__full g-opacity-transition" aria-label="Sunday music and hot coffee.." aria-role="img"></span>
-
+    <div class="topnav">
+      <div
+        style="color:white; margin-right: 15px; float:left; padding:32px 14px; margin-left; 15px"
+      >
+        Search
       </div>
     </div>
+    <div class="non-player">
+      <aside>
+        <ul class="links">
+          <div class="bread">Music</div>
+          <li>
+            <a href="#" class="active"
+              ><span class="material-icons">explore</span>Explore</a
+            >
+          </li>
+          <li>
+            <a href="#"><ion-icon name="musical-notes"></ion-icon>Songs</a>
+          </li>
+          <li>
+            <a href="#"
+              ><span class="material-icons">library_music</span>Albums</a
+            >
+          </li>
+          <li>
+            <a href="#"><span class="material-icons">grade</span>Trending</a>
+          </li>
+          <li>
+            <a href="#"><span class="material-icons">favorite</span>Liked</a>
+          </li>
+        </ul>
 
+        <ul class="links">
+          <div class="bread">My Playlist</div>
+          <li>
+            <a href="#"
+              ><span class="material-icons">queue_music</span>List 1</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="material-icons">queue_music</span>List 2</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><span class="material-icons">queue_music</span>List 3</a
+            >
+          </li>
+        </ul>
+      </aside>
+      <div
+        class="ta-app-wrapper"
+        style="padding-top: 75px; padding-left: 275px;"
+      >
+        <div class="ta-app">
+          <div class="top1 column col-6">
+            <h1 class="title">Mood for today</h1>
+            <section class="right">
+              <a href="#" class="show">Show all</a>
+              <button>
+                <span class="material-icons">keyboard_arrow_left</span>
+              </button>
+              <button>
+                <span class="material-icons">keyboard_arrow_right</span>
+              </button>
+            </section>
 
-</body>
+            <div class="flex" style="flex-direction: column;">
+              <a href="#" style="background: red; width: 100%;">qwe</a>
+              <a href="#" style="background: red; width: 100%;">qwe</a>
+            </div>
+          </div>
+          <div class="top column col-6">
+            <h1 class="title">Weekly Chart</h1>
+            <section class="right">
+              <a href="#" class="show">Show all</a>
+              <button>
+                <span class="material-icons">keyboard_arrow_left</span>
+              </button>
+              <button>
+                <span class="material-icons">keyboard_arrow_right</span>
+              </button>
+            </section>
 
+            <div class="ta-stat-board align-top" style="clear: both;">
+              <ul>
+                <li>#</li>
+                <li id="stat1">Title</li>
+                <li class="stat">Artist</li>
+                <li class="stat">Album</li>
+              </ul>
 
+              <div class="ta-stat-tracks" style="clear: both;">
+                <div
+                  class="stat-image"
+                  style="
+                    background-image: url(http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV);
+                  "
+                ></div>
+                <div class="card-stat">
+                  <a
+                    href="#"
+                    class="title play-song"
+                    data-song='{
+                  "title": "Pushing Bakch the dark",
+                  "artist": "Josh Wilson",
+                  "mp3":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "oga":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "poster":
+                    "http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV"
+                }'
+                    >Pushing Back the Dark</a
+                  >
+                  <a href="#" class="username">Josh Wilson</a>
+                  <a href="#" class="username">Pushing Back the Dark</a>
+                </div>
+              </div>
+              <div class="ta-stat-tracks" style="clear: both;">
+                <div
+                  class="stat-image"
+                  style="
+                    background-image: url(http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV);
+                  "
+                ></div>
+                <div class="card-stat">
+                  <a
+                    href="#"
+                    class="title play-song"
+                    data-song='{
+                  "title": "Pushing Bakch the dark",
+                  "artist": "Josh Wilson",
+                  "mp3":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "oga":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "poster":
+                    "http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV"
+                }'
+                    >Pushing Back the Dark</a
+                  >
+                  <a href="#" class="username">Josh Wilson</a>
+                  <a href="#" class="username">Pushing Back the Dark</a>
+                </div>
+              </div>
+              <div class="ta-stat-tracks" style="clear: both;">
+                <div
+                  class="stat-image"
+                  style="
+                    background-image: url(http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV);
+                  "
+                ></div>
+                <div class="card-stat">
+                  <a
+                    href="#"
+                    class="title play-song"
+                    data-song='{
+                  "title": "Pushing Bakch the dark",
+                  "artist": "Josh Wilson",
+                  "mp3":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "oga":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "poster":
+                    "http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV"
+                }'
+                    >Pushing Back the Dark</a
+                  >
+                  <a href="#" class="username">Josh Wilson</a>
+                  <a href="#" class="username">Pushing Back the Dark</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <h1 class="title">Recently Added</h1>
+          <section class="right">
+            <a href="#" class="show">Show all</a>
+            <button>
+              <span class="material-icons">keyboard_arrow_left</span>
+            </button>
+            <button>
+              <span class="material-icons">keyboard_arrow_right</span>
+            </button>
+          </section>
 
+          <div class="cards grid-container">
+            <div class="card">
+              <div
+                class="image"
+                style="
+                  background-image: url(http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV);
+                  background-size: cover;
+                  width: 100%;
+                  height: 100%;
+                "
+              ></div>
+              <div class="card-text">
+                <a
+                  href="#"
+                  class="title play-song"
+                  data-song='{
+                  "title": "Pushing Bakch the dark",
+                  "artist": "Josh Wilson",
+                  "mp3":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "oga":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "poster":
+                    "http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV"
+                }'
+                  >Pushing Back the Dark</a
+                >
+                <a href="#" class="username">Josh Wilson</a>
+              </div>
+            </div>
+            <div class="card">
+              <div
+                class="image"
+                style="
+                  background-image: url(http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV);
+                  background-size: cover;
+                  width: 100%;
+                  height: 100%;
+                "
+              ></div>
+              <div class="card-text">
+                <a
+                  href="#"
+                  class="title play-song"
+                  data-song='{
+                  "title": "Pushing Bakch the dark",
+                  "artist": "Josh Wilson",
+                  "mp3":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "oga":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "poster":
+                    "http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV"
+                }'
+                  >Pushing Back the Dark</a
+                >
+                <a href="#" class="username">Josh Wilson</a>
+              </div>
+            </div>
+            <div class="card">
+              <div
+                class="image"
+                style="
+                  background-image: url(http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV);
+                  background-size: cover;
+                  width: 100%;
+                  height: 100%;
+                "
+              ></div>
+              <div class="card-text">
+                <a
+                  href="#"
+                  class="title play-song"
+                  data-song='{
+                  "title": "Pushing Bakch the dark",
+                  "artist": "Josh Wilson",
+                  "mp3":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "oga":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "poster":
+                    "http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV"
+                }'
+                  >Pushing Back the Dark</a
+                >
+                <a href="#" class="username">Josh Wilson</a>
+              </div>
+            </div>
+            <div class="card">
+              <div
+                class="image"
+                style="
+                  background-image: url(http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV);
+                  background-size: cover;
+                  width: 100%;
+                  height: 100%;
+                "
+              ></div>
+              <div class="card-text">
+                <a
+                  href="#"
+                  class="title play-song"
+                  data-song='{
+                  "title": "Pushing Bakch the dark",
+                  "artist": "Josh Wilson",
+                  "mp3":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "oga":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "poster":
+                    "http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV"
+                }'
+                  >Pushing Back the Dark</a
+                >
+                <a href="#" class="username">Kanye North</a>
+              </div>
+            </div>
+          </div>
+          <h1 class="title">Trending</h1>
+          <section class="right">
+            <a href="#" class="show">Show all</a>
+            <button>
+              <span class="material-icons">keyboard_arrow_left</span>
+            </button>
+            <button>
+              <span class="material-icons">keyboard_arrow_right</span>
+            </button>
+          </section>
+
+          <div class="cards grid-container">
+            <div class="card">
+              <div
+                class="image"
+                style="
+                  background-image: url(http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV);
+                  background-size: cover;
+                  width: 100%;
+                  height: 100%;
+                "
+              ></div>
+              <div class="card-text">
+                <a
+                  href="#"
+                  class="title play-song"
+                  data-song='{
+                  "title": "Pushing Bakch the dark",
+                  "artist": "Josh Wilson",
+                  "mp3":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "oga":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "poster":
+                    "http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV"
+                }'
+                  >Pushing Back the Dark</a
+                >
+                <a href="#" class="username">Josh Wilson</a>
+              </div>
+              <!--            <div class="card-stats">-->
+              <!--        <div class="stat">-->
+              <!--          <div class="value">4<sup>m</sup></div>-->
+              <!--          <div class="type">read</div>-->
+              <!--        </div>-->
+              <!--        <div class="stat border">-->
+              <!--          <div class="value">5123</div>-->
+              <!--          <div class="type">views</div>-->
+              <!--        </div>-->
+              <!--        <div class="stat">-->
+              <!--          <div class="value">32</div>-->
+              <!--          <div class="type">comments</div>-->
+              <!--            <a href="#">Lifted</a>-->
+              <!--        </div>-->
+              <!--      </div>-->
+            </div>
+            <div class="card">
+              <div
+                class="image"
+                style="
+                  background-image: url(http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV);
+                  background-size: cover;
+                  width: 100%;
+                  height: 100%;
+                "
+              ></div>
+              <div class="card-text">
+                <a
+                  href="#"
+                  class="title play-song"
+                  data-song='{
+                  "title": "Pushing Bakch the dark",
+                  "artist": "Josh Wilson",
+                  "mp3":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "oga":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "poster":
+                    "http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV"
+                }'
+                  >Pushing Back the Dark</a
+                >
+                <a href="#" class="username">Kanye North</a>
+              </div>
+              <!--            <div class="card-stats">-->
+              <!--        <div class="stat">-->
+              <!--          <div class="value">4<sup>m</sup></div>-->
+              <!--          <div class="type">read</div>-->
+              <!--        </div>-->
+              <!--        <div class="stat border">-->
+              <!--          <div class="value">5123</div>-->
+              <!--          <div class="type">views</div>-->
+              <!--        </div>-->
+              <!--        <div class="stat">-->
+              <!--          <div class="value">32</div>-->
+              <!--          <div class="type">comments</div>-->
+              <!--            <a href="#">Lifted</a>-->
+              <!--        </div>-->
+              <!--      </div>-->
+            </div>
+            <div class="card">
+              <div
+                class="image"
+                style="
+                  background-image: url(http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV);
+                  background-size: cover;
+                  width: 100%;
+                  height: 100%;
+                "
+              ></div>
+              <div class="card-text">
+                <a
+                  href="#"
+                  class="title play-song"
+                  data-song='{
+                  "title": "Pushing Bakch the dark",
+                  "artist": "Josh Wilson",
+                  "mp3":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "oga":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "poster":
+                    "http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV"
+                }'
+                  >Pushing Back the Dark</a
+                >
+                <a href="#" class="username">Josh Wilson</a>
+              </div>
+              <!--            <div class="card-stats">-->
+              <!--        <div class="stat">-->
+              <!--          <div class="value">4<sup>m</sup></div>-->
+              <!--          <div class="type">read</div>-->
+              <!--        </div>-->
+              <!--        <div class="stat border">-->
+              <!--          <div class="value">5123</div>-->
+              <!--          <div class="type">views</div>-->
+              <!--        </div>-->
+              <!--        <div class="stat">-->
+              <!--          <div class="value">32</div>-->
+              <!--          <div class="type">comments</div>-->
+              <!--            <a href="#">Lifted</a>-->
+              <!--        </div>-->
+              <!--      </div>-->
+            </div>
+            <div class="card">
+              <div
+                class="image"
+                style="
+                  background-image: url(http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV);
+                  background-size: cover;
+                  width: 100%;
+                  height: 100%;
+                "
+              ></div>
+              <div class="card-text">
+                <a
+                  href="#"
+                  class="title play-song"
+                  data-song='{
+                  "title": "Pushing Bakch the dark",
+                  "artist": "Josh Wilson",
+                  "mp3":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "oga":
+                    "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+                  "poster":
+                    "http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV"
+                }'
+                  >Pushing Back the Dark</a
+                >
+                <a href="#" class="username">Josh Wilson</a>
+              </div>
+            </div>
+          </div>
+
+          <span
+            style="
+              background-image: url('http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV');
+              width: 100%;
+              height: 100%;
+              opacity: 1;
+            "
+            class="sc-artwork sc-artwork-placeholder-10 image__full g-opacity-transition"
+            aria-label="Sunday music and hot coffee.."
+            aria-role="img"
+          ></span>
+        </div>
+      </div>
+    </div>
+    <div
+      id="jp_container"
+      class="jp-video jp-video-270p"
+      role="application"
+      aria-label="media player"
+    >
+      <div class="jp-gui">
+        <!-- <div class="jp-video-play" >
+        <button class="video-play-icon" role="button" tabindex="0">
+          play
+        </button>
+      </div> -->
+        <div class="interface">
+          <div class="left">
+            <div id="jquery_jplayer_1" class="fas jp-jplayer"></div>
+            <div class="details">
+              <div>
+                <i class="fas fa-compact-disc"></i>
+                <span class="jp-title" aria-label="title">&nbsp;</span>
+              </div>
+
+              <div>
+                <i class="fas fa-microphone-alt"></i>
+                <span class="jp-artist">&nbsp;</span>
+              </div>
+            </div>
+          </div>
+          <div class="middle">
+            <div class="jp-progress">
+              <div class="jp-seek-bar">
+                <div class="jp-play-bar"></div>
+              </div>
+              <div class="jp-time">
+                <div class="jp-current-time" role="timer" aria-label="time">
+                  &nbsp;
+                </div>
+                <div class="jp-duration" role="timer" aria-label="duration">
+                  &nbsp;
+                </div>
+              </div>
+            </div>
+            <div class="controls-holder">
+              <div class="controls">
+                <div class="shuffle-option">
+                  <button class="jp-shuffle toggle" role="button" tabindex="0">
+                    <i class="fas fa-random"></i>
+                  </button>
+                  <button
+                    class="jp-shuffle-off toggle"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <i class="fas fa-random"></i>
+                  </button>
+                </div>
+                <button class="jp-previous change" role="button" tabindex="0">
+                  <i class="fas fa-step-backward"></i>
+                </button>
+                <div class="play-options">
+                  <button class="jp-play main" role="button" tabindex="0">
+                    <i class="fas fa-play"></i>
+                  </button>
+                  <button class="jp-pause main" role="button" tabindex="0">
+                    <i class="fas fa-pause"></i>
+                  </button>
+                </div>
+                <button class="jp-next change" role="button" tabindex="0">
+                  <i class="fas fa-step-forward"></i>
+                </button>
+                <button class="jp-stop change" role="button" tabindex="0">
+                  <i class="fas fa-stop"></i>
+                </button>
+                <div class="repeat-options">
+                  <button class="jp-repeat toggle" role="button" tabindex="0">
+                    <i class="fas fa-redo-alt"></i>
+                  </button>
+                  <button
+                    class="jp-repeat-off toggle"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <i class="fas fa-redo-alt"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="playlist-options">
+              <button class="jp-remove-playlist" role="button" tabindex="0">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+              <button class="jp-show-playlist" role="button" tabindex="0">
+                <i class="fas fa-list"></i>
+              </button>
+              <button class="jp-hide-playlist" role="button" tabindex="0">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="volume-controls">
+              <div class="extremes">
+                <div>
+                  <button class="jp-mute" role="button" tabindex="0">
+                    <i class="fas fa-volume-mute"></i>
+                  </button>
+                  <button class="jp-unmute" role="button" tabindex="0">
+                    <i class="fas fa-volume-down"></i>
+                  </button>
+                </div>
+                <button class="jp-volume-max" role="button" tabindex="0">
+                  <i class="fas fa-volume-up"></i>
+                </button>
+              </div>
+              <div class="jp-volume-bar">
+                <div class="jp-volume-bar-value"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="jp-playlist">
+          <ul>
+            <!-- The method Playlist.displayPlaylist() uses this unordered list -->
+            <li>&nbsp;</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
