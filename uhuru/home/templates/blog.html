@@ -1,10 +1,284 @@
-<!DOCTYPE html>
+{% load static %}
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Blog</title>
-</head>
-<body>
-<p>this is blog</p>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">-->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css.map">
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" ></script>
+    <title>Online Music</title>
+
+    <style>
+        body{
+            background-color: #f7f7f7;
+            font-family: 'Open Sans', sans-serif;
+        }
+        img{
+            width:100%;
+
+        }
+        .main{
+            padding:40px 0;
+        }
+        .album-poster{
+            position:relative;
+            display:block;
+            border-radius: 3px;
+            overflow:hidden;
+            box-shadow: 0 15px 35px #3d2173a1;
+            transition: all ease 0.4s;
+        }
+        .album-poster:hover{
+            box-shadow: none;
+            transform: scale(0.98) translateY(5px);
+        }
+        h3{
+            font-size: 34px;
+            margin-bottom: 34px;
+            border-bottom: 4px solid #e6e6e6;
+            padding-bottom: 15px;
+        }
+        p{
+            font-size: 15px;
+        }
+        h4{
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        #aplayer{
+                position: fixed;
+                background-repeat: none;
+                bottom: -100%;
+                left: 0;
+                width:100%;
+                margin: 0;
+                box-shadow: 0 -2px 2px #dadada;
+                background-color: #fff;
+                transition: all ease 0.5s;
+            }
+        #aplayer.showPlayer{
+            bottom: 0;
+        }
+        span{
+            color: #000 !important;
+            font-size: 16px;
+        }
+        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded{
+            background: #e0e0e0;
+            height:4px;
+        }
+        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played{
+            height: 4px;
+            background-color: #2196F3 !important;
+        }
+
+        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb{
+            background-color: #2196F3 !important;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>New releases</h3>
+                </div>
+                <div class="col-md-3" >
+
+                    <a href="javascript:void();" class="album-poster" data-switch="1">
+                        <img src="https://i1.sndcdn.com/artworks-000104728925-im0y74-t200x200.jpg" alt="">
+                    </a>
+                    <h4>Lorem ipsum</h4>
+                    <p>lorem ipsum - 2010</p>
+                </div>
+                <div class="col-md-3">
+
+                    <a href="javascript:void();" class="album-poster" data-switch="2">
+                        <img src="https://i1.sndcdn.com/artworks-000104728925-im0y74-t200x200.jpg" alt="">
+                    </a>
+                    <h4>Lorem ipsum</h4>
+                    <p>lorem ipsum - 2010</p>
+                </div>
+                <div class="col-md-3">
+
+                    <a href="javascript:void();" class="album-poster" data-switch="3">
+                        <img src="https://i1.sndcdn.com/artworks-000104728925-im0y74-t200x200.jpg" alt="">
+                    </a>
+                    <h4>Lorem ipsum</h4>
+                    <p>lorem ipsum - 2010</p>
+                </div>
+                <div class="col-md-3">
+
+                    <a href="javascript:void();" class="album-poster" data-switch="4">
+                        <img src="https://i1.sndcdn.com/artworks-000104728925-im0y74-t200x200.jpg" alt="">
+                    </a>
+                    <h4>Lorem ipsum</h4>
+                    <p>lorem ipsum - 2010</p>
+                </div>
+                <div class="col-md-3">
+
+                    <a href="javascript:void();" class="album-poster" data-switch="5">
+                        <img src="https://i1.sndcdn.com/artworks-000104728925-im0y74-t200x200.jpg" alt="">
+                    </a>
+                    <h4>Lorem ipsum</h4>
+                    <p>lorem ipsum - 2010</p>
+                </div>
+                <div class="col-md-3">
+
+                    <a href="javascript:void();" class="album-poster" data-switch="6">
+                        <img src="https://i1.sndcdn.com/artworks-000104728925-im0y74-t200x200.jpg" alt="">
+                    </a>
+                    <h4>Lorem ipsum</h4>
+                    <p>lorem ipsum - 2010</p>
+                </div>
+                <div class="col-md-3">
+
+                    <a href="javascript:void();" class="album-poster" data-switch="1">
+                        <img src="https://i1.sndcdn.com/artworks-000104728925-im0y74-t200x200.jpg" alt="">
+                    </a>
+                    <h4>Lorem ipsum</h4>
+                    <p>lorem ipsum - 2010</p>
+                </div>
+                <div class="col-md-3">
+
+                    <a href="javascript:void();" class="album-poster" data-switch="2">
+                        <img src="https://i1.sndcdn.com/artworks-000104728925-im0y74-t200x200.jpg" alt="">
+                    </a>
+                    <h4>Lorem ipsum</h4>
+                    <p>lorem ipsum - 2010</p>
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Coming soon</h3>
+                </div>
+                <div class="col-md-2">
+                    <a href="#" class="album-poster">
+                        <img src="https://i1.sndcdn.com/artworks-000233434893-n4xs0d-t200x200.jpg" alt="">
+                    </a>
+                    <h4>Lorem ipsum</h4>
+                </div>
+                <div class="col-md-2">
+                    <a href="#" class="album-poster">
+                        <img src="https://i1.sndcdn.com/artworks-000233434893-n4xs0d-t200x200.jpg" alt="">
+                    </a>
+                    <h4>Lorem ipsum</h4>
+                </div>
+                <div class="col-md-2">
+                    <a href="#" class="album-poster">
+                        <img src="https://i1.sndcdn.com/artworks-000233434893-n4xs0d-t200x200.jpg" alt="">
+                    </a>
+                    <h4>Lorem ipsum</h4>
+                </div>
+                <div class="col-md-2">
+                    <a href="#" class="album-poster">
+                        <img src="https://i1.sndcdn.com/artworks-000233434893-n4xs0d-t200x200.jpg" alt="">
+                    </a>
+                    <h4>Lorem ipsum</h4>
+                </div>
+                <div class="col-md-2">
+                    <a href="#" class="album-poster">
+                        <img src="https://i1.sndcdn.com/artworks-000233434893-n4xs0d-t200x200.jpg" alt="">
+                    </a>
+                    <h4>Lorem ipsum</h4>
+                </div>
+                <div class="col-md-2">
+                    <a href="#" class="album-poster">
+                        <img src="https://i1.sndcdn.com/artworks-000233434893-n4xs0d-t200x200.jpg" alt="">
+                    </a>
+                    <h4>Lorem ipsum</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="aplayer">
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+
+    <script>
+        $(".album-poster").on('click',function(e){
+            var dataSwitchId = $(this).attr('data-switch');
+
+            ap.list.switch(dataSwitchId);
+
+            ap.play();
+
+            $("#aplayer").addClass('showPlayer');
+        });
+        const ap = new APlayer({
+                container: document.getElementById('aplayer'),
+                listFolded: true,
+                audio: [
+        {
+                    name: 'Imba',
+                    artist: 'Bethu & Highest Praise band',
+                    url: "{ % static 'music/3.Utukufu.mp3' %}",
+                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
+                },
+
+               {
+                    name: 'Mungu Wetu',
+                    artist: 'Bethu & Highest Praise band',
+                    url: "{ % static 'music/2.Mungu Wetu.mp3' %}",
+                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
+                },
+                {
+                    name: 'Utukufu',
+                    artist: 'Bethu & Highest Praise band',
+                    url: "{ % static 'music/3.Utukufu.mp3' %}",
+                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
+                },
+                {
+                    name: 'Holy Spirit',
+                    artist: 'Bethu & Highest Praise band',
+                    url: "{ % static 'music/3.Utukufu.mp3' %}",
+                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
+                },
+                {
+                    name: 'We Are Free',
+                    artist: 'Bethu & Highest Praise band',
+                    url: "{ % static 'music/3.Utukufu.mp3' %}",
+                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
+                },
+                {
+                    name: 'All I need',
+                    artist: 'Bethu & Highest Praise band',
+                    url: "{ % static 'music/3.Utukufu.mp3' %}",
+                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
+                },
+            ]
+            });
+    </script>
 </body>
+
 </html>

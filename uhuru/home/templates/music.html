@@ -1,14 +1,15 @@
 {% load static %}
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Music</title>
-    <link rel="stylesheet" href="{% static '/css/music.css' %}">
+    <link rel="stylesheet" href="{% static 'css/music.css' %}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css.map">
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js" ></script>
 
@@ -24,6 +25,19 @@
         }
 
 
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded{
+    background: #e0e0e0;
+    height:4px;
+}
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played{
+    height: 4px;
+    background-color: #2196F3 !important;
+}
+
+.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb{
+    background-color: #2196F3 !important;
+}
 
 
 
@@ -41,9 +55,10 @@
             <ul class="links">
                 <div class="bread">Music</div>
                 <li><a href="#" class="active"><span class="material-icons">explore</span>Explore</a></li>
-                <li><a href="#"><ion-icon name="musical-notes"></ion-icon>Songs</a></li>
-                <li><a href="#"><span class="material-icons">library_music</span>Albums</a></li>
                 <li><a href="#"><span class="material-icons">grade</span>Trending</a></li>
+                <li><a href="#"><ion-icon name="musical-notes"></ion-icon>Stream</a></li>
+                <li><a href="#"><span class="material-icons">library_music</span>Albums</a></li>
+
                 <li><a href="#"><span class="material-icons">favorite</span>Liked</a></li>
             </ul>
 
@@ -58,18 +73,30 @@
         </aside>
     <div class="ta-app-wrapper" style="padding-top: 75px; padding-left: 275px;">
         <div class="ta-app">
-            <div class="top1 column col-6">
+            <div class="top1 column col-6" style="269px;">
+                <div class="mood">
                 <h1 class="title">Mood for today</h1>
                  <section class="right" >
                      <a href="" class="show">Show all</a>
                     <button><span class="material-icons">keyboard_arrow_left</span></button>
                     <button><span class="material-icons">keyboard_arrow_right</span></button>
                 </section>
-
-                <div class="flex" style="flex-direction:column;" >
-                    <a href="" style="background: red; width:100%;">qwe</a>
-                    <a href="" style="background: red; width:100%;">qwe</a>
                 </div>
+<!--                <div class="flex" style="flex-direction:column; height:100%; overflow:hidden;" >-->
+<!--                    <a href="" style=" width:100%;  flex:1; padding: 20px 0;">-->
+<!--                        <span class="background" style="background:red; width:100%; display:block; height:100%;">Fow</span></a>-->
+
+<!--                     <a href="" style=" width:100%;  flex:1; padding: 20px 0;">-->
+<!--                        <span class="background" style="background:red; width:100%; display:block; height:100%;">Fow</span></a>-->
+
+<!--                </div>-->
+                <a href="" class="ta-genre-block">Mood 1</a>
+                <a href="" class="ta-genre-block">Mood 2</a>
+                <a href="" class="ta-genre-block">Mood 3</a>
+                <a href="" class="ta-genre-block">Mood 4</a>
+                <a href="" class="ta-genre-block">Mood 5</a>
+
+
 
 
             </div>
@@ -81,7 +108,7 @@
             <button><span class="material-icons">keyboard_arrow_right</span></button>
         </section>
 
-        <div class="ta-stat-board align-top" style="clear:both;">
+        <div class="ta-stat-board flex-column ">
             <ul>
             <li>#</li>
             <li id="stat1">Title</li>
@@ -120,8 +147,8 @@
             <div class="ta-stat-tracks" style="clear:both;" >
 
 
-            <div class="stat-image" style="background-image: url(https://i1.sndcdn.com/artworks-000147165684-3hzdwx-t500x500.jpg); "></div>
-               <div class="card-stat" >
+            <div class="stat-image" style="background-image: url(https://i1.sndcdn.com/artworks-000147165684-3hzdwx-t500x500.jpg);"></div>
+                <div class="card-stat" >
                 <a href="" class="title">Love Awakens</a>
                 <a href="" class="username">Kanye  West</a>
                 <a href="" class="username">Jesus is King</a>
@@ -129,6 +156,33 @@
 
             </div>
 
+            </div>
+            <div class="ta-stat-tracks" style="clear:both;" >
+
+
+            <div class="stat-image" style="background-image: url(https://i1.sndcdn.com/artworks-000147165684-3hzdwx-t500x500.jpg);"></div>
+                <div class="card-stat" >
+                <a href="" class="title">Love Awakens</a>
+                <a href="" class="username">Kanye  West</a>
+                <a href="" class="username">Jesus is King</a>
+
+
+            </div>
+
+            </div>
+            <div class="ta-stat-tracks" style="clear:both;" >
+
+
+            <div class="stat-image" style="background-image: url(https://i1.sndcdn.com/artworks-000147165684-3hzdwx-t500x500.jpg); "></div>
+               <div class="card-stat" >
+                <a href="" class="title">Love Awakens</a>
+                <a href="" class="username">Kanye  West</a>
+                <a href="" class="username">Jesus is King</a>
+
+
+
+            </div>
+
 
             </div>
         </div>
@@ -138,7 +192,7 @@
         </div>
 
 
-        <h1 class="title">Recently Added</h1>
+        <h1 class="recent" >Recently Added</h1>
         <section class="right" >
              <a href="" class="show">Show all</a>
             <button><span class="material-icons">keyboard_arrow_left</span></button>
@@ -150,14 +204,37 @@
         <div class="cards grid-container">
 
         <div class="card">
-            <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-000147165684-3hzdwx-t500x500.jpg); background-size: cover; width:100%; height:100%;"></div>
+
+            <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-000147165684-3hzdwx-t500x500.jpg); background-size: cover; width:100%; height:100%;">
+                <div class="hover flex align-center justify-center">
+                 <button class="ta-play flex align-center justify-center"><span class="material-icons flex align-center">play_arrow</span></button>
+             </div>
+            </div>
+
             <div class="card-text">
                 <a href="" class="title">Love Awakens</a>
                 <a href="" class="username">Kanye  West</a>
 
             </div>
 
-    </div>
+        </div>
+
+
+        <div class="card playing">
+
+            <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-mFszANGYblsfYsSu-dkuvLA-t500x500.jpg); background-size: cover; width:100%; height:100%;">
+                <div class="hover flex align-center justify-center">
+                 <button class="ta-play-active flex align-center justify-center"><span class="material-icons flex align-center">pause</span></button>
+             </div>
+            </div>
+
+            <div class="card-text">
+                <a href="" class="title">Love Awakens</a>
+                <a href="" class="username">Kanye  West</a>
+
+            </div>
+
+        </div>
         <div class="card">
             <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-mFszANGYblsfYsSu-dkuvLA-t500x500.jpg); background-size: cover; width:100%; height:100%;"></div>
             <div class="card-text">
@@ -171,7 +248,16 @@
             <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-mFszANGYblsfYsSu-dkuvLA-t500x500.jpg); background-size: cover; width:100%; height:100%;"></div>
             <div class="card-text">
                 <a href="" class="title">Love Awakens</a>
-                <a href="" class="username">Kanye  West</a>
+                <a href="" class="username">Kanye  North</a>
+
+            </div>
+
+    </div>
+        <div class="card">
+            <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-mFszANGYblsfYsSu-dkuvLA-t500x500.jpg); background-size: cover; width:100%; height:100%;"></div>
+            <div class="card-text">
+                <a href="" class="title">Love Awakens</a>
+                <a href="" class="username">Kanye  North</a>
 
             </div>
 
@@ -205,21 +291,7 @@
                 <a href="" class="username">Kanye  West</a>
 
             </div>
-<!--            <div class="card-stats">-->
-<!--        <div class="stat">-->
-<!--          <div class="value">4<sup>m</sup></div>-->
-<!--          <div class="type">read</div>-->
-<!--        </div>-->
-<!--        <div class="stat border">-->
-<!--          <div class="value">5123</div>-->
-<!--          <div class="type">views</div>-->
-<!--        </div>-->
-<!--        <div class="stat">-->
-<!--          <div class="value">32</div>-->
-<!--          <div class="type">comments</div>-->
-<!--            <a href="#">Lifted</a>-->
-<!--        </div>-->
-<!--      </div>-->
+
     </div>
         <div class="card">
             <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-mFszANGYblsfYsSu-dkuvLA-t500x500.jpg); background-size: cover; width:100%; height:100%;"></div>
@@ -228,21 +300,7 @@
                 <a href="" class="username">Kanye  North</a>
 
             </div>
-<!--            <div class="card-stats">-->
-<!--        <div class="stat">-->
-<!--          <div class="value">4<sup>m</sup></div>-->
-<!--          <div class="type">read</div>-->
-<!--        </div>-->
-<!--        <div class="stat border">-->
-<!--          <div class="value">5123</div>-->
-<!--          <div class="type">views</div>-->
-<!--        </div>-->
-<!--        <div class="stat">-->
-<!--          <div class="value">32</div>-->
-<!--          <div class="type">comments</div>-->
-<!--            <a href="#">Lifted</a>-->
-<!--        </div>-->
-<!--      </div>-->
+
     </div>
         <div class="card">
             <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-mFszANGYblsfYsSu-dkuvLA-t500x500.jpg); background-size: cover; width:100%; height:100%;"></div>
@@ -251,21 +309,6 @@
                 <a href="" class="username">Kanye  West</a>
 
             </div>
-<!--            <div class="card-stats">-->
-<!--        <div class="stat">-->
-<!--          <div class="value">4<sup>m</sup></div>-->
-<!--          <div class="type">read</div>-->
-<!--        </div>-->
-<!--        <div class="stat border">-->
-<!--          <div class="value">5123</div>-->
-<!--          <div class="type">views</div>-->
-<!--        </div>-->
-<!--        <div class="stat">-->
-<!--          <div class="value">32</div>-->
-<!--          <div class="type">comments</div>-->
-<!--            <a href="#">Lifted</a>-->
-<!--        </div>-->
-<!--      </div>-->
     </div>
         <div class="card">
             <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-mFszANGYblsfYsSu-dkuvLA-t500x500.jpg); background-size: cover; width:100%; height:100%"></div>
@@ -275,18 +318,122 @@
 
             </div>
 
-    </div>
+        </div>
+            <div class="card">
+            <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-mFszANGYblsfYsSu-dkuvLA-t500x500.jpg); background-size: cover; width:100%; height:100%"></div>
+            <div class="card-text">
+                <a href="" class="title">Love Awakens</a>
+                <a href="" class="username">Kanye  West</a>
 
+            </div>
+
+    </div>
+                 <div class="card">
+            <div class="image" style="background-image: url(https://i1.sndcdn.com/artworks-mFszANGYblsfYsSu-dkuvLA-t500x500.jpg); background-size: cover; width:100%; height:100%"></div>
+            <div class="card-text">
+                <a href="" class="title">Love Awakens</a>
+                <a href="" class="username">Kanye  West</a>
+
+            </div>
+
+    </div>
 
         </div>
 
 
-        <span style="background-image: url(&quot;https://i1.sndcdn.com/artworks-000147165684-3hzdwx-t500x500.jpg&quot;); width: 100%; height: 100%; opacity: 1;" class="sc-artwork sc-artwork-placeholder-10  image__full g-opacity-transition" aria-label="Sunday music and hot coffee.." aria-role="img"></span>
 
+
+        <span style="background-image: url(&quot;https://i1.sndcdn.com/artworks-000147165684-3hzdwx-t500x500.jpg&quot;); width: 100%; height: 100%; opacity: 1;" class="sc-artwork sc-artwork-placeholder-10  image__full g-opacity-transition" aria-label="Sunday music and hot coffee.." aria-role="img"></span>
+        <div id="aplayer"  ></div>
       </div>
+
     </div>
 
+<!--    <div id="ta-player">-->
 
+<!--            <div class="ta-player-container flex">-->
+<!--                <section class="ta-player-info flex align-center">-->
+<!--&lt;!&ndash;                    <div class="ta-artwork" style="width:65px;">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span style="background-image: url(https://i1.sndcdn.com/artworks-000147165684-3hzdwx-t500x500.jpg);"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="ta-meta flex">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a href="" class="title">Love Awakens</a><br>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a href="" class="username">Kanye West</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--                </section>-->
+<!--&lt;!&ndash;                 <section class="ta-player-progress flex align-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                     <div class="ta-player-progress-wrapper">&ndash;&gt;-->
+<!--&lt;!&ndash;                         <div class="ta-player-controls"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                         <div class="ta-player-controls"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                     </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                 </section>&ndash;&gt;-->
+
+
+
+<!--            </div>-->
+
+<!--    </div>-->
+
+    <!-- Jquery link-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js.map" ></script>
+<!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>-->
+
+    <script type="text/javascript">
+<!--        $(".album-poster").on('click',function(e){-->
+<!--            var dataSwitchId = $(this).attr('data-switch');-->
+
+<!--            ap.list.switch(dataSwitchId);-->
+
+<!--            ap.play();-->
+
+<!--            $("#aplayer").addClass('showPlayer');-->
+<!--        });-->
+        const ap = new APlayer({
+                container: document.getElementById('aplayer'),
+                listFolded: true,
+                audio: [
+                {
+                    name: 'Imba',
+                    artist: 'Bethu & Highest Praise band',
+                    url: "{% static 'music/1.Imba.mp3' %}",
+                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
+                },
+
+               {
+                    name: 'Mungu Wetu',
+                    artist: 'Bethu & Highest Praise band',
+                    url: "{% static 'music/2.Mungu Wetu.mp3' %}",
+                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
+                },
+                {
+                    name: 'Utukufu',
+                    artist: 'Bethu & Highest Praise band',
+                    url: "{% static 'music/3.Utukufu.mp3' %}",
+                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
+                },
+                {
+                    name: 'Holy Spirit',
+                    artist: 'Bethu & Highest Praise band',
+                    url: "{% static 'music/4.Holy Spirit Medley.mp3' %}",
+                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
+                },
+                {
+                    name: 'We Are Free',
+                    artist: 'Bethu & Highest Praise band',
+                    url: "{% static 'music/5.We Are Free.mp3' %}",
+                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
+                },
+                {
+                    name: 'All I need',
+                    artist: 'Bethu & Highest Praise band',
+                    url: "{% static 'music/7.All I Need.mp3' %}",
+                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
+                },
+            ]
+            });
+    </script>
 </body>
 
 

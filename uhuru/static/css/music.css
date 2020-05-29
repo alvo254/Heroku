@@ -76,9 +76,19 @@ width: 100%;
 color: white;
 font-size: 24px;
 display: flex;
+
 }
 
+h1.recent{
+    display: flex;
+    flex-align: center;
+    color: white;
+    font-size: 24px;
+    padding:1px;
+    margin-top: 450px;
 
+
+}
 
 
 section.right {
@@ -93,23 +103,49 @@ section.right {
 }
 
 .top1{
-    float: right;
-    display: flex;
-    flex-direction: column;
-    flex-justify:end;
+    float: left;
+    height: 269px;
+
+
 }
 
 .top{
-    position: sticky;
+    float: right;
     padding: 0;
+    margin:0;
+}
+.flex{
+    height: 100%;
+    overflow:hidden;
+}
+
+.flex a{
+    width:100%;
+}
+ a.ta-genre-block{
+    width: 100%;
+    margin-top: 15px;
+    /*background: linear-gradient(transparent, #00c6ff);*/
+    background: linear-gradient(transparent, #2ABB6A);
+
+    padding: 18px 15px;
+    border-radius: 3px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: white;
 }
 .ta-stat-board {
-    margin: 0;
-    padding: 0;
+    margin-top: auto:
+    padding:0;
+    display: flex;
+    flex-justify:top;
+
     }
 
 .ta-stat-tracks{
- margin-top:-10px;
+ margin-top:0;
+ display: flex;
+ flex-justify:top;
  overflow: hidden;
  text-align: center;
  text-overflow: ellipsis;
@@ -149,7 +185,7 @@ section.right {
     overflow: hidden;
     white-space: nowrap;
     font-size: 14px;
-    margin-left: 2
+    margin-left: 2px;
 
 
 }
@@ -209,12 +245,11 @@ a.show:hover{
 button:hover {
     color: white;
 }
-
-span{
+/*span{
     font-size: 32px;
     letter-spacing: -10px;
 
-}
+}*/
 
 .recent {
   margin-top:0px;
@@ -252,6 +287,48 @@ span{
   overflow: hidden;
 
 }
+/*style for asset button*/
+
+.hover {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-display:row;
+    justify-content: center;
+    flex-align: center;
+    flex-justify: center;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(black, .6);
+}
+
+ button.ta-play span, button.ta-play-active span{
+    display:flex;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #cbcdd1;
+    border-radius: 50%;
+    color: white;
+    justify-content: center;
+    flex-align: center;
+    align-items: center;
+    margin-bottom: 25px;
+
+}
+
+button.ta-play-active span{
+    background-color: white;
+    color: #0955ed;
+}
+
+
+ .playing .image  .hover {
+   background-color: rgba(0, 0, 255, 0.2);
+   background-size: 120px;
+}
+
+.hover
 .card-text {
   grid-area: text;
   margin: 1px;
@@ -312,11 +389,11 @@ a.title:hover, a.title:active {
     top: 0;
 }
 
-/*.topnav {
+.topnav {
   overflow: hidden;
   background-color: blue;
   flex-align: center;
-}*/
+}
 aside {
     width: 275px;
     height: 100%;
@@ -385,9 +462,102 @@ aside ul{
 
 aside a:hover{
     color: white;
-
 }
 aside .active {
     color: #44c1ff;
 
 }
+
+/*
+player styling*/
+
+#ta-player {
+     width: 100%;
+     height:90px;
+     background-color: white;
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     z-index: 10;
+     padding:15px 30px;
+}
+.ta-player-container{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction:row;
+
+}
+
+.ta-artwork{
+    margin-right:30px;
+}
+
+.ta-artwork span {
+    background-size: cover;
+    background-position:center;
+    padding-bottom: 100%;
+    display:block;
+}
+
+.ta-meta {
+
+    width:6.8em;
+    margin-left:70px;
+    margin-top:-70px;
+    display:flex;
+    text-align: center;
+    flex-direction: column;
+    flex-align:center;
+    justify-items: center;
+
+
+}
+.ta-meta a.title {
+    font-size: 18px;
+    fon-weight:500;
+    color: #174778;
+}
+
+.ta-meta a.username {
+    font-size: 14px;
+    font-weight: 500;
+    color:#949494;
+}
+a.title:hover{
+    color: #0a7ff5;
+    text-decoration: none;
+}
+ a.username:hover{
+    color: #434445;
+    text-decoration: none;
+}
+ .ta-meta a {
+    margin-top: 20px;
+    margin-bottom: -2.8em;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 13px;
+
+
+}
+
+section.ta-player-controls{
+    flex:2;
+    width: 500px;
+
+}
+/*#aplayer{
+    position: fixed;
+    background-repeat: none;
+    bottom: -100%;
+    left: 0;
+    padding:0;
+    width:100%;
+    margin: 0;
+    box-shadow: 0 -2px 2px #dadada;
+    background- color: #fff;
+    transition: all ease 0.5s;
+}*/
+
+
