@@ -43,8 +43,8 @@ $(document).ready(function () {
     keyEnabled: true,
     audioFullScreen: false, // Allows the audio poster to go full screen via keyboard
     size: {
-      width: "100px",
-      height: "100px",
+      width: "75px",
+      height: "75px",
     },
     stateClass: {
       playing: "state-playing",
