@@ -8,7 +8,10 @@ urlpatterns = [
     path('music/', views.music, name='music'),
     path('blog/', views.blog, name='blog'),
     path('about/', views.about, name='about'),
-    path('misc/', views.about, name='misc'),
+    path('misc/', views.about, name='misc'),   # This was a test url
+    path('podcast/', views.podcast, name='podcast'),
+    path('episodes/', views.episodes, name='episodes'),
+    # path('<str:name>/', views.episodes, name='episodes')
 
 ]
 

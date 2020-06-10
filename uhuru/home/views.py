@@ -22,3 +22,11 @@ def about(request):
 
 def misc(request):
     return render(request, template_name='misc.html')
+
+
+def podcast(request):
+    return render(request, template_name='podcast.html')
+
+
+def episodes(request):
+    return render(request, template_name='episodes.html')
