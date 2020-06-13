@@ -125,11 +125,6 @@ STATICFILES_DIRS = (
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-<<<<<<< HEAD
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-=======
-MEDIA_ROOT = os.path.join(BASE_DIR, "songdir")
-MEDIA_URL = '/media/'
->>>>>>> 78c2167e4ca0b77e5174f7b57521cfabbd1660d8

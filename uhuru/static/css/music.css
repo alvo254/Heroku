@@ -5,8 +5,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Iceberg&display=swap");
 /* ? End of imports */
 
-* {
-  font-family: " Proxima Nova";
+*{
+  font-family: ' Proxima Nova';
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,21 +16,75 @@
   list-style-type: none;
 }
 
-body {
-  width: 100%;
+body{
+  width:100%;
   height: 100vh;
+
 }
+
+
+::-webkit-scrollbar{
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+
+  background: linear-gradient(transparent, #00c6ff);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+  background: linear-gradient(transparent, #30ff00);
+
+}
+
 
 .ta-app-wrapper {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom right, #2f3b49 10%, #0f1014);
+  background-image: linear-gradient(to bottom right,#2F3B49 10%, #0F1014);
+  padding-top: 75px;
+  padding-left: 275px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  justify-items: space-around;
+  display: block;
+ }
+
+.ta-app{
+  width:100%;
+  height:100%;
+  overflow-x: hidden;
+ overflow-y: auto;
+ padding: 0 15px;
+ }
+
+ .topnav {
+  width: calc(100% - 275px);
+  height: 75px;
+  background-color: rgba(0, 0, 8, 0.2);
+  position: fixed;
+  right: 0;
+  top: 0;
+  align-items: center;
 }
 
-<<<<<<< HEAD
+.ta-app-wrapper .cards {
+display: flex; linear-gradient(to bottom right,#2F3B49 10%, #0F1014);
+background-color:
+flex-align: center;
+overflow-y: auto;
+grid-gap: 30px;
+grid-template: 1fr repeat(12,minmax(auto,60px)) 1fr;
+grid-column:
+justify-items: space-around;
+padding: .05em;
+column-gap; 30px;
+width: 100%;
+
+
+}
+
 
 
 
@@ -42,163 +96,101 @@ display: flex;
 }
 
 h1.recent{
-    display: flex;
-    flex-align: center;
-    color: white;
-    font-size: 24px;
-    padding:1px;
-    margin-top: 450px;
-
-
-}
-
-=======
-.ta-app {
-  width: 100%;
-  flex: auto;
-  overflow-x: hidden;
-  overflow-y: auto;
-  padding: 0 15px;
-}
-
-.ta-app-wrapper .cards {
   display: flex;
-  background: linear-gradient(to bottom right, #2f3b49 10%, #0f1014);
   flex-align: center;
-  overflow-y: auto;
-  grid-gap: 30px;
-  /* ! TO BE CHECKED AGAIN */
-  grid-template: 1fr repeat(12, minmax(auto, 60px)) 1fr;
-  /* ! TO BE CHECKED AGAIN */
-  /* grid-column: */
-  justify-items: space-around;
-  padding: 0.05em;
-  column-gap: 30px;
-  width: 100%;
-}
-
-.title {
   color: white;
   font-size: 24px;
-  display: flex;
+  padding:1px;
+  margin-top: 450px;
+
+
 }
->>>>>>> 78c2167e4ca0b77e5174f7b57521cfabbd1660d8
+
 
 section.right {
-  display: flex;
+  display:flex;
   width: 100%;
   position: relative;
   flex-align: center;
   justify-content: flex-end;
   align-items: center;
   margin-top: -2em;
+
 }
 
-<<<<<<< HEAD
 .top1{
-    float: left;
-    height: 269px;
+  float: left;
+  height: 269px;
 
 
 }
 
 .top{
-    float: right;
-    padding: 0;
-    margin:0;
+  float: right;
+  padding: 0;
+  margin:0;
 }
 .flex{
-    height: 100%;
-    overflow:hidden;
+  height: 100%;
+  overflow:hidden;
 }
 
 .flex a{
-    width:100%;
+  width:100%;
 }
- a.ta-genre-block{
-    width: 100%;
-    margin-top: 15px;
-    /*background: linear-gradient(transparent, #00c6ff);*/
-    background: linear-gradient(transparent, #2ABB6A);
+a.ta-genre-block{
+  width: 100%;
+  margin-top: 15px;
+  /*background: linear-gradient(transparent, #00c6ff);*/
+  background: linear-gradient(transparent, #2ABB6A);
 
-    padding: 18px 15px;
-    border-radius: 3px;
-    font-weight: 500;
-    margin-bottom: 15px;
-    color: white;
+  padding: 18px 15px;
+  border-radius: 3px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: white;
 }
 .ta-stat-board {
-    margin-top: auto:
-    padding:0;
-    display: flex;
-    flex-justify:top;
+  margin-top: auto:
+  padding:0;
+  display: flex;
+  flex-justify:top;
 
-    }
+  }
 
 .ta-stat-tracks{
- margin-top:0;
- display: flex;
- flex-justify:top;
- overflow: hidden;
- text-align: center;
- text-overflow: ellipsis;
+margin-top:0;
+display: flex;
+flex-justify:top;
+overflow: hidden;
+text-align: center;
+text-overflow: ellipsis;
 
-=======
-.top1 {
-  float: right;
-  display: flex;
-  flex-direction: column;
-  flex-justify: end;
 }
-
-.top {
-  position: sticky;
-  padding: 0;
-}
-.ta-stat-board {
-  margin: 0;
-  padding: 0;
->>>>>>> 78c2167e4ca0b77e5174f7b57521cfabbd1660d8
-}
-
-.ta-stat-tracks {
-  margin-top: -10px;
-  overflow: hidden;
-  text-align: center;
-  text-overflow: ellipsis;
-}
-.ta-stat-board ul {
+.ta-stat-board ul{
   color: white;
   font-size: 15px;
   display: flex;
   flex-align: center;
   width: 100%;
   flex-direction: row;
+
+
 }
+
+
 
 .ta-stat-tracks {
-  display: flex; /* establish flex container */
-  flex-direction: row; /* default value; can be omitted */
-  flex-wrap: nowrap; /* default value; can be omitted */
-  flex-align: center;
-  margin: 0 0 10px;
+display: flex;                  /* establish flex container */
+flex-direction: row;            /* default value; can be omitted */
+flex-wrap: nowrap;              /* default value; can be omitted */
+flex-align: center;
+margin: 0 0 10px;
+
+
+
 }
 .card-stat {
-<<<<<<< HEAD
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    width: 30em;
-    justify-content: flex-end;
-    clear: both;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 14px;
-    margin-left: 2px;
-
-
-=======
   display: flex;
   flex-direction: row;
   margin-top: 20px;
@@ -209,8 +201,9 @@ section.right {
   overflow: hidden;
   white-space: nowrap;
   font-size: 14px;
-  margin-left: 2;
->>>>>>> 78c2167e4ca0b77e5174f7b57521cfabbd1660d8
+  margin-left: 2px;
+
+
 }
 .card-stat a {
   margin-right: 120px;
@@ -219,228 +212,236 @@ section.right {
   overflow: hidden;
   font-size: 16px;
   display: inline-block;
+
 }
 
-.card-stat a + a {
-  margin-left: -4em;
+.card-stat a+a {
+margin-left: -4em;
+
 }
 
 .stat-image {
-  width: 50px;
-  height: 50px;
-  background-size: cover;
+ width:50px;
+ height: 50px;
+ background-size: cover;
+
+
 }
-li.stat {
+li.stat{
   margin-left: 120px;
+
 }
-li#stat1 {
-  margin-left: 70px;
+li#stat1{
+margin-left: 70px;
 }
-#li {
+#li{
   margin-left: 100px;
 }
 button {
-  background-color: Transparent;
-  /* ! TO BE CHECKED AGAIN */
-  /* margin-top; */
-  background-repeat: no-repeat;
+  background-color: Transparent;margin-top;
+  background-repeat:no-repeat;
   border: none;
-  cursor: pointer;
+  cursor:pointer;
   overflow: hidden;
-  outline: none;
-  /* ! CHANGED */
-  /* color: #aeb1b5; */
+  outline:none;
+  color: #aeb1b5;
   align: center;
   font-size: 32px;
+
 }
 a.show {
-  margin-right: 0.5em;
+  margin-right: .5em;
   font-weight: 500;
   color: #d4d6d9;
 }
 
-a.show:hover {
+a.show:hover{
   color: white;
 }
-<<<<<<< HEAD
-/*span{
-    font-size: 32px;
-    letter-spacing: -10px;
-
-}*/
-=======
-
-/* ! CHANGED */
-/* button:hover {
+button:hover {
   color: white;
-} */
-
-/* ! CHANGED */
-/* span {
+}
+/*span{
   font-size: 32px;
   letter-spacing: -10px;
-} */
->>>>>>> 78c2167e4ca0b77e5174f7b57521cfabbd1660d8
+
+}*/
 
 .recent {
-  margin-top: 0px;
-  font-size: 28px;
-  font-weight: 500;
-  color: white;
-  overflow: hidden;
-  white-space: nowrap;
+margin-top:0px;
+font-size:28px;
+font-weight: 500;
+color: white;
+overflow: hidden;
+white-space: nowrap;
 }
 .card {
-  display: grid;
-  grid-template-columns: 200px;
-  /* ! TO BE CHECKED AGAIN */
-  grid-template-rows: 210px 3px 10px;
-  height: 200px;
-  width: 150px;
-  grid-template-areas: "image" "text" "stats";
-  border-radius: 18px;
-  grid-space: 20px;
-  background-color: rgba(0, 0, 8, 0.2);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-  font-family: roboto;
-  text-align: center;
-  white-space: nowrap;
-  position: relative;
-  overflow-y: auto;
-  margin: 0.3em;
+display: grid;
+grid-template-columns: 200px;
+grid-template-rows: 210px; 3px; 10px;
+height: 200px;
+width: 150px;
+grid-template-areas: "image" "text"  "stats";
+border-radius: 18px;
+grid-space: 20px;
+background-color:rgba(0, 0, 8, 0.2);
+box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+font-family: roboto;
+text-align: center;
+white-space: nowrap;
+position: relative;
+overflow-y: auto;
+margin: .3em;
+
+}
+
+/*new class set in every card to change the background colr of the card*/
+
+.card.set{
+  background-color:rgba(0, 0, 8, 0.2);
 }
 .card-image {
-  grid-area: image;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  background-size: cover;
-  position: absolute;
-  overflow: hidden;
+grid-area: image;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+background-size: cover;
+position: absolute;
+overflow: hidden;
+
 }
 /*style for asset button*/
 
 .hover {
-    width: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    flex-display:row;
-    justify-content: center;
-    flex-align: center;
-    flex-justify: center;
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(black, .6);
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-display:row;
+  justify-content: center;
+  flex-align: center;
+  flex-justify: center;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(black, .6);
 }
 
- button.ta-play span, button.ta-play-active span{
-    display:flex;
-    width: 50px;
-    height: 50px;
-    border: 1px solid #cbcdd1;
-    border-radius: 50%;
-    color: white;
-    justify-content: center;
-    flex-align: center;
-    align-items: center;
-    margin-bottom: 25px;
+button.ta-play span, button.ta-play-active span{
+  display:flex;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #cbcdd1;
+  border-radius: 50%;
+  color: white;
+  justify-content: center;
+  flex-align: center;
+  align-items: center;
+  margin-bottom: 25px;
 
 }
 
 button.ta-play-active span{
-    background-color: white;
-    color: #0955ed;
+  background-color: white;
+  color: #0955ed;
 }
 
 
- .playing .image  .hover {
-   background-color: rgba(0, 0, 255, 0.2);
-   background-size: 120px;
+.playing .image  .hover {
+ background-color: rgba(0, 0, 255, 0.2);
+ background-size: 120px;
 }
 
 .hover
 .card-text {
-  grid-area: text;
-  margin: 1px;
-  text-align: left;
-  padding: 2px;
+grid-area: text;
+margin: 1px;
+text-align: left;
+padding: 2px;
+
 }
 
 .card-text .username {
-  color: #949494;
-  font-size: 14px;
-  font-weight: 300;
-  left: 0;
+color: #949494;
+font-size:14px;
+font-weight: 300;
+left: 0;
+
 }
 
-a.username:hover,
-a.username:active {
+a.username:hover, a.username:active {
   color: #44c1ff;
-}
+  }
 
 .card-text .title {
-  margin-top: 0px;
-  font-size: 16px;
-  font-weight: 500;
-  /* !CHANGED */
-  color: green;
-  overflow: hidden;
-  white-space: nowrap;
+margin-top:0px;
+font-size:16px;
+font-weight: 500;
+color: white;
+overflow: hidden;
+white-space: nowrap;
 }
-a.title:hover,
-a.title:active {
+a.title:hover, a.title:active {
   color: #44c1ff;
-}
+  }
 .card-stats {
-  grid-area: stats;
-  display: block;
-  size: 3px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background: rgb(255, 7, 110);
+grid-area: stats;
+display: block;
+size: 3px;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+background: rgb(255, 7, 110);
 }
 
 .card-stats .stat {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
 
-  color: white;
-  padding: 3px;
+color: white;
+padding:3px;
 }
-
 .topnav {
-  width: 100%;
-  flex: 0 0 75px;
-  background-color: rgba(0, 0, 8, 0.2);
-  display: flex;
-  align-items: center;
-  color: white;
-  padding: 0 20px;
+  width: calc(100% - 275px);
+  height: 75px;
+  background-color:rgba(0, 0, 8, 0.2);
+  position: fixed;
+  right: 0;
+  top: 0;
 }
 
-.topnav {
-  overflow: hidden;
-  background-color: blue;
-  flex-align: center;
-}
+
 aside {
-  /* ! CHNAGED */
-  flex: 0 0 275px;
+  width: 275px;
   height: 100%;
-  background-image: linear-gradient(to bottom right, #2f3b49 10%, #0f1014);
+  background-color: rgba(0, 0, 8, 0.2);
   padding: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+ .bread{
+  font-size: 18px;
+ }
+ ul{
+      list-style-type: none;
+      display: block
+      li {
+         a {
+         font-size: 30px;
+         text-decoration: none;
+         }
+      }
+  }
 }
-
 a {
   text-decoration: none;
   display: flex;
   font-content: 500;
   align-items: center;
   color: #777;
+
 }
 
 .links .material-icons {
@@ -450,17 +451,19 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
-li {
+li  {
   list-style: none;
   margin: 20px 0;
 }
 
 a ion-icon {
-  font-size: 24px;
-  margin-right: 12px;
+font-size: 24px;
+margin-right: 12px;
 }
+
 
 .bread {
   color: white;
@@ -468,24 +471,112 @@ a ion-icon {
   font-size: 20px;
 }
 
-aside ul {
-  list-style-type: none;
-  display: block;
-  /* ! CHNAGED */
-  margin-bottom: 20px;
+
+aside ul{
+      list-style-type: none;
+      display: block;
+      margin-bottom: 60px;
 }
 
-aside a:hover {
+aside a:hover{
   color: white;
 }
 aside .active {
   color: #44c1ff;
+
 }
 
-<<<<<<< HEAD
-aside a:hover{
-    color: white;
-=======
+/*
+player styling*/
+
+#ta-player {
+   width: 100%;
+   height:90px;
+   background-color: white;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   z-index: 10;
+   padding:15px 30px;
+}
+.ta-player-container{
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-direction:row;
+
+}
+
+.ta-artwork{
+  margin-right:30px;
+}
+
+.ta-artwork span {
+  background-size: cover;
+  background-position:center;
+  padding-bottom: 100%;
+  display:block;
+}
+
+.ta-meta {
+
+  width:6.8em;
+  margin-left:70px;
+  margin-top:-70px;
+  display:flex;
+  text-align: center;
+  flex-direction: column;
+  flex-align:center;
+  justify-items: center;
+
+
+}
+.ta-meta a.title {
+  font-size: 18px;
+  fon-weight:500;
+  color: #174778;
+}
+
+.ta-meta a.username {
+  font-size: 14px;
+  font-weight: 500;
+  color:#949494;
+}
+a.title:hover{
+  color: #0a7ff5;
+  text-decoration: none;
+}
+a.username:hover{
+  color: #434445;
+  text-decoration: none;
+}
+.ta-meta a {
+  margin-top: 20px;
+  margin-bottom: -2.8em;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 13px;
+
+
+}
+
+section.ta-player-controls{
+  flex:2;
+  width: 500px;
+
+}
+/*#aplayer{
+  position: fixed;
+  background-repeat: none;
+  bottom: -100%;
+  left: 0;
+  padding:0;
+  width:100%;
+  margin: 0;
+  box-shadow: 0 -2px 2px #dadada;
+  background- color: #fff;
+  transition: all ease 0.5s;
+}*/
 /* TODO Most of the new style code will be found below */
 * {
   margin: 0;
@@ -555,106 +646,8 @@ aside a:hover{
 
 .state-playlist .jp-show-playlist {
   display: none !important;
->>>>>>> 78c2167e4ca0b77e5174f7b57521cfabbd1660d8
 }
 
-<<<<<<< HEAD
-}
-
-/*
-player styling*/
-
-#ta-player {
-     width: 100%;
-     height:90px;
-     background-color: white;
-     position: fixed;
-     bottom: 0;
-     left: 0;
-     z-index: 10;
-     padding:15px 30px;
-}
-.ta-player-container{
-    width: 100%;
-    height: 100%;
-    display:flex;
-    flex-direction:row;
-
-}
-
-.ta-artwork{
-    margin-right:30px;
-}
-
-.ta-artwork span {
-    background-size: cover;
-    background-position:center;
-    padding-bottom: 100%;
-    display:block;
-}
-
-.ta-meta {
-
-    width:6.8em;
-    margin-left:70px;
-    margin-top:-70px;
-    display:flex;
-    text-align: center;
-    flex-direction: column;
-    flex-align:center;
-    justify-items: center;
-
-
-}
-.ta-meta a.title {
-    font-size: 18px;
-    fon-weight:500;
-    color: #174778;
-}
-
-.ta-meta a.username {
-    font-size: 14px;
-    font-weight: 500;
-    color:#949494;
-}
-a.title:hover{
-    color: #0a7ff5;
-    text-decoration: none;
-}
- a.username:hover{
-    color: #434445;
-    text-decoration: none;
-}
- .ta-meta a {
-    margin-top: 20px;
-    margin-bottom: -2.8em;
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 13px;
-
-
-}
-
-section.ta-player-controls{
-    flex:2;
-    width: 500px;
-
-}
-/*#aplayer{
-    position: fixed;
-    background-repeat: none;
-    bottom: -100%;
-    left: 0;
-    padding:0;
-    width:100%;
-    margin: 0;
-    box-shadow: 0 -2px 2px #dadada;
-    background- color: #fff;
-    transition: all ease 0.5s;
-}*/
-
-
-=======
 .state-playlist .jp-hide-playlist {
   display: initial !important;
 }
@@ -978,4 +971,6 @@ section.ta-player-controls{
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(transparent, #30ff00);
 }
->>>>>>> 78c2167e4ca0b77e5174f7b57521cfabbd1660d8
+
+
+
