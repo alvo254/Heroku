@@ -13,4 +13,20 @@ def music(request):
 
 
 def blog(request):
-    return render(request, template_name='blog.html')
+    return render(request, template_name='blog-single.html')
+
+
+def about(request):
+    return render(request, template_name='about.html')
+
+
+def misc(request):
+    return render(request, template_name='misc.html')
+
+
+def podcast(request):
+    return render(request, template_name='podcast.html')
+
+
+def episodes(request):
+    return render(request, template_name='episodes.html')

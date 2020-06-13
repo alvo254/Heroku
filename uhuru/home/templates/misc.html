@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+<p>this is blog</p>
+   {% for song in song_list %}
+                            <tr>
+                                <td>{{ song.song_title }}</td>
+                                <td>{{ song.album.artist }}</td>
+                                <td>
+                                    <audio controls="controls">
+                                        <source src="/songdir/Elevation Worship - Here As In Heaven (Live).mp3" type="audio/mp3" />
+                                        <source src="{{ song.audio_file.url }}" type="audio/mpeg" />
+                                        <source src="{{ song.audio_file.url }}" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                      </audio>
+                                </td>
+                                <td>
+                                    <a href="{% url 'music:detail' song.album.id %}">
+                                        <img src="{{ song.album.album_logo.url }}" class="img-responsive" style="width: 20px; float: left; margin-right: 10px;" />
+                                    </a>
+                                    <a href="{% url 'music:detail' song.album.id %}">{{ song.album.album_title }}</a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'music:favorite' song.id %}" class="btn-favorite"><span class="glyphicon glyphicon-star {% if song.is_favorite %}active{% endif %}"></span></a>
+                                </td>
+                                <td>
+
+                                </td>
+                            </tr>
+                            {% endfor %}
+
+</body>
+</html>
