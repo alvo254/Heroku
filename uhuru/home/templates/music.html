@@ -69,7 +69,7 @@
             </ul>
 
             <ul class="links">
-                <div class="bread">My Playlist</div>
+                <dpyiv class="bread">My Playlist</dpyiv>
                 <li><a href="#"><span class="material-icons">queue_music</span>List 1</a></li>
                 <li><a href="#"><span class="material-icons">queue_music</span>List 2</a></li>
                 <li><a href="#"><span class="material-icons">queue_music</span>List 3</a></li>
@@ -88,19 +88,14 @@
                     <button><span class="material-icons">keyboard_arrow_right</span></button>
                 </section>
                 </div>
-<!--                <div class="flex" style="flex-direction:column; height:100%; overflow:hidden;" >-->
-<!--                    <a href="" style=" width:100%;  flex:1; padding: 20px 0;">-->
-<!--                        <span class="background" style="background:red; width:100%; display:block; height:100%;">Fow</span></a>-->
-
-<!--                     <a href="" style=" width:100%;  flex:1; padding: 20px 0;">-->
-<!--                        <span class="background" style="background:red; width:100%; display:block; height:100%;">Fow</span></a>-->
-
-<!--                </div>-->
-                <a href="" class="ta-genre-block">Mood 1</a>
-                <a href="" class="ta-genre-block">Mood 2</a>
-                <a href="" class="ta-genre-block">Mood 3</a>
-                <a href="" class="ta-genre-block">Mood 4</a>
-                <a href="" class="ta-genre-block">Mood 5</a>
+                  <div class="ta-genre-block">
+                    <a href="" contenteditable="m1">Mood 1</a>
+                    <a href=""class="m2" >Mood 2</a>
+                    <a href=""class="m3" >Mood 3</a>
+                    <a href="" class="m4">Mood 4</a>
+                    <a href="" class="m5">Mood 5</a>
+                  </div>
+               
 
 
 
@@ -732,60 +727,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js.map" ></script>
 <!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>-->
 
-    <script type="text/javascript">
-<!--        $(".album-poster").on('click',function(e){-->
-<!--            var dataSwitchId = $(this).attr('data-switch');-->
 
-<!--            ap.list.switch(dataSwitchId);-->
-
-<!--            ap.play();-->
-
-<!--            $("#aplayer").addClass('showPlayer');-->
-<!--        });-->
-        const ap = new APlayer({
-                container: document.getElementById('aplayer'),
-                listFolded: true,
-                audio: [
-                {
-                    name: 'Imba',
-                    artist: 'Bethu & Highest Praise band',
-                    url: "{% static 'music/1.Imba.mp3' %}",
-                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
-                },
-
-               {
-                    name: 'Mungu Wetu',
-                    artist: 'Bethu & Highest Praise band',
-                    url: "{% static 'music/2.Mungu Wetu.mp3' %}",
-                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
-                },
-                {
-                    name: 'Utukufu',
-                    artist: 'Bethu & Highest Praise band',
-                    url: "{% static 'music/3.Utukufu.mp3' %}",
-                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
-                },
-                {
-                    name: 'Holy Spirit',
-                    artist: 'Bethu & Highest Praise band',
-                    url: "{% static 'music/4.Holy Spirit Medley.mp3' %}",
-                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
-                },
-                {
-                    name: 'We Are Free',
-                    artist: 'Bethu & Highest Praise band',
-                    url: "{% static 'music/5.We Are Free.mp3' %}",
-                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
-                },
-                {
-                    name: 'All I need',
-                    artist: 'Bethu & Highest Praise band',
-                    url: "{% static 'music/7.All I Need.mp3' %}",
-                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
-                },
-            ]
-            });
-    </script>
 </body>
 
 

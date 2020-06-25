@@ -1,0 +1,623 @@
+@import url("./fonts.css");
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Damion&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Iceberg&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+}
+
+.non-player {
+  display: flex;
+  height: calc(100vh - 100px);
+}
+
+.non-player aside {
+  flex: 0 0 30%;
+}
+
+.non-player aside ul {
+  width: 80%;
+  margin-right: 10px;
+  float: right;
+  list-style: none;
+}
+
+.non-player aside ul li {
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  transition: 1s;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.non-player aside ul li i {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(161, 196, 253);
+  border-radius: 50%;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+  margin-right: 7px;
+}
+
+.non-player aside ul li:hover i {
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.non-player aside ul li:hover {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+#jp_container {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.non-player main {
+  height: 100%;
+  overflow: auto;
+  flex: auto;
+}
+
+.non-player main section {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.non-player main section .section-title {
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.non-player .playlist-section .items {
+  display: flex;
+}
+
+.non-player .playlist-section .items .box {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.non-player .playlist-section .items .box:hover {
+  transform: translateY(-10px);
+}
+
+.non-player .playlist-section .items .box .bg {
+  height: 70%;
+}
+
+.non-player .playlist-section .items .box .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.non-player .playlist-section .items .box .meta {
+  position: relative;
+  padding: 10px;
+  height: 30%;
+}
+
+.non-player .playlist-section .items .box .meta span {
+  font-family: "Damion", cursive;
+}
+.non-player .playlist-section .items .box .meta div {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.1);
+  color: rgb(161, 196, 253);
+}
+
+.non-player .playlist-section .items .box .meta div:hover {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.non-player .song-section .items {
+  display: flex;
+  flex-direction: column;
+}
+
+.non-player .song-section .items .song-item {
+  /* height: 100px; */
+  width: 90%;
+  padding: 10px;
+  display: flex;
+  border-radius: 10px;
+  /* overflow: hidden; */
+  margin: 10px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.non-player .song-section .items .song-item:hover {
+  transform: translateY(-10px);
+}
+
+.non-player .song-section .items .song-item .bg {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.non-player .song-section .items .song-item .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.non-player .song-section .items .song-item .meta {
+  flex: auto;
+  position: relative;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.non-player .song-section .items .song-item .meta h3 {
+  position: relative;
+}
+
+.non-player .song-section .items .song-item .meta h3 ul {
+  font-weight: normal;
+  font-size: 16px;
+  list-style: none;
+  padding: 0 20px;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  width: 200px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.1);
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.non-player .song-section .items .song-item .meta h3.toggle ul {
+  height: 55px;
+}
+
+.non-player .song-section .items .song-item .meta h3 ul li {
+  background: linear-gradient(
+    to bottom,
+    rgb(161, 196, 253) 0%,
+    rgb(194, 233, 251) 100%
+  );
+  border-radius: 30px;
+  padding: 0 10px;
+  margin: 5px 0;
+  border: 1px solid transparent;
+}
+
+.non-player .song-section .items .song-item .meta h3 ul li:first-child {
+  margin-top: 15px;
+}
+
+.non-player .song-section .items .song-item .meta h3 ul li:last-child {
+  margin-bottom: 15px;
+}
+
+.non-player .song-section .items .song-item .meta h3 ul li:hover {
+  border-color: gold;
+  cursor: pointer;
+}
+
+.non-player .song-section .items .song-item .meta h3 ul li:active {
+  border-color: green;
+}
+
+.non-player .song-section .items .song-item .meta span {
+  font-family: "Damion", cursive;
+}
+.non-player .song-section .items .song-item .meta div {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.1);
+  color: rgb(161, 196, 253);
+}
+
+.non-player .song-section .items .song-item .meta div:hover {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+.jp-jplayer {
+  /* flex: 0 0 30%;
+  height: 100%; */
+  position: relative;
+}
+
+.jp-jplayer::before {
+  content: "\f001";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  opacity: 0.3;
+}
+
+.jp-jplayer img {
+  object-fit: cover;
+}
+
+/* ! STATES SECTION */
+
+.state-playing .jp-play {
+  display: none;
+}
+.state-playing .jp-pause {
+  display: inline-block;
+}
+.state-seeking {
+}
+.state-muted .jp-mute {
+  display: none;
+}
+.state-looped .jp-repeat-off {
+  color: rgb(161, 196, 253);
+}
+.state-full-screen {
+}
+.state-no-volume {
+}
+
+.state-playlist .jp-show-playlist {
+  display: none !important;
+}
+
+.state-playlist .jp-hide-playlist {
+  display: initial !important;
+}
+
+.state-playlist .jp-playlist {
+  height: calc(100vh - 100px) !important;
+  overflow-y: auto !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* ! END OF STATE SECTION */
+
+.jp-state-shuffled .jp-shuffle-off {
+  color: rgb(161, 196, 253);
+  display: flex !important;
+}
+
+.jp-state-shuffled .jp-shuffle {
+  display: none !important;
+}
+
+.jp-gui {
+  position: relative;
+}
+
+.jp-gui .interface {
+  display: flex;
+}
+
+.jp-gui .interface .left {
+  flex: 0 0 30%;
+  display: flex;
+}
+
+.jp-gui .interface .left .details {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.jp-gui .interface .left .details .jp-title {
+  font-family: "Lexend", sans-serif;
+}
+
+.jp-gui .interface .left .details > div:not(:first-child) {
+  margin-top: 7px;
+}
+
+.jp-gui .interface .left .details .artist {
+  font-family: "Damion", cursive;
+}
+
+.jp-gui .middle {
+  width: 40%;
+  margin: 0 auto 0 20px;
+}
+
+.jp-gui .middle .jp-progress {
+  margin-top: 10px;
+  height: 5px;
+}
+
+.jp-gui .middle .jp-progress .jp-seek-bar {
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.jp-gui .middle .jp-progress .jp-seek-bar .jp-play-bar {
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(161, 196, 253) 0%,
+    rgb(194, 233, 251) 100%
+  );
+  border-radius: 30px;
+}
+
+.jp-gui .middle .jp-progress .jp-time {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Iceberg", cursive;
+}
+
+.jp-gui .middle .jp-progress .jp-time > div {
+  font-family: "Iceberg", cursive;
+}
+.jp-gui .middle .controls-holder {
+  margin-top: 10px;
+}
+
+.jp-gui .middle .controls-holder .controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jp-gui .middle .controls-holder button {
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.jp-gui .middle .controls-holder button.main {
+  border-radius: 50px;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  color: rgb(161, 196, 253);
+}
+
+.jp-gui .middle .controls-holder button.change {
+  border-radius: 50px;
+  height: 40px;
+  width: 40px;
+}
+
+.jp-gui .middle .controls-holder button.toggle {
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.jp-gui .middle .controls-holder button.jp-shuffle-off {
+  display: none;
+}
+
+.jp-gui .middle .controls-holder button:hover {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.jp-gui .right {
+  flex: 0 0 10%;
+  margin-right: 20px;
+  display: flex;
+}
+
+.jp-gui .right button {
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  padding: 2.5px 10px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.jp-gui .right button:hover {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.jp-gui .right .playlist-options {
+  display: flex;
+  align-items: flex-start;
+}
+
+.jp-gui .right .playlist-options button {
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 40px;
+}
+
+.jp-gui .right .playlist-options button.jp-hide-playlist {
+  display: none;
+}
+
+.jp-gui .right .volume-controls {
+  width: 100%;
+}
+
+.jp-gui .right .volume-controls .extremes {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.jp-gui .right .jp-volume-bar {
+  margin-top: 10px;
+  height: 5px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.jp-gui .right .jp-volume-bar-value {
+  height: 100%;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(161, 196, 253) 0%,
+    rgb(194, 233, 251) 100%
+  );
+}
+
+.jp-gui .jp-playlist {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  height: 0;
+  padding: 0 20px;
+  overflow: hidden;
+  transition: 0.3s;
+  background: rgba(161, 196, 253, 0.374);
+  min-width: 200px;
+}
+
+.jp-gui .jp-playlist ul {
+  list-style: none;
+  max-height: 100%;
+}
+.jp-gui .jp-playlist ul a {
+  text-decoration: none;
+  color: black;
+  outline: none;
+}
+
+.jp-gui .jp-playlist li {
+  padding: 5px 10px 20px 10px;
+  margin: 5px 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.jp-gui .jp-playlist li:hover {
+  font-weight: 700;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.jp-gui .jp-playlist li a:active {
+  color: rgb(161, 196, 253);
+}
+
+.jp-gui .jp-playlist li .jp-playlist-item {
+  flex: auto;
+}
+
+.jp-gui .jp-playlist li .jp-artist {
+  position: relative;
+  bottom: -90%;
+  float: right;
+  font-size: 13px;
+  color: grey;
+  margin-left: 10px;
+  /* font-family: "Yellowtail", cursive; */
+  font-family: "Damion", cursive;
+}
+
+.jp-gui .jp-playlist li:hover .jp-artist {
+  font-weight: normal;
+}
+
+.jp-gui .jp-playlist li a.jp-playlist-current {
+  font-weight: 700;
+  color: green;
+}
+
+.jp-gui .jp-playlist li .jp-playlist-item-remove {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 50%;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
+}
+
+.jp-gui .jp-playlist li .jp-playlist-item-remove:active {
+  color: rgb(161, 196, 253);
+}
+
+.jp-gui .jp-playlist li .jp-playlist-item-remove:active {
+  color: red;
+}
+
+.jp-gui .jp-playlist li > div {
+  display: flex;
+  flex-direction: row-reverse;
+}

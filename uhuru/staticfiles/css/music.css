@@ -1,59 +1,75 @@
+/* ! Adding the imports here is a requirement for CSS most new code is further down */
+@import url("./fonts.css");
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Damion&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Iceberg&display=swap");
+/* ? End of imports */
 
 *{
-    font-family: ' Proxima Nova';
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    boxface-visibility: hidden;
-    -webkit-font-smoothing: antialiased;
-    list-style-type: none;
+  font-family: ' Proxima Nova';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  boxface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  list-style-type: none;
 }
 
 body{
-    width:100%;
-    height: 100vh;
+  width:100%;
+  height: 100vh;
 
 }
 
 
- ::-webkit-scrollbar{
-    width: 5px;
-  }
+::-webkit-scrollbar{
+  width: 5px;
+}
 
-  ::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb{
 
-    background: linear-gradient(transparent, #00c6ff);
-    border-radius: 6px;
-  }
+  background: linear-gradient(transparent, #00c6ff);
+  border-radius: 6px;
+}
 
-  ::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover{
 
-    background: linear-gradient(transparent, #30ff00);
+  background: linear-gradient(transparent, #30ff00);
 
-  }
+}
 
 
 .ta-app-wrapper {
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom right,#2F3B49 10%, #0F1014);
-    padding-top: 75px;
-    padding-left: 275px;
-    overflow: hidden;
-    justify-items: space-around;
-    display: block;
-   }
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right,#2F3B49 10%, #0F1014);
+  padding-top: 75px;
+  padding-left: 275px;
+  overflow: hidden;
+  justify-items: space-around;
+  display: block;
+ }
 
 .ta-app{
-    width:100%;
-    height:100%;
-    overflow-x: hidden;
-   overflow-y: auto;
-   padding: 0 15px;
-   }
+  width:100%;
+  height:100%;
+  overflow-x: hidden;
+ overflow-y: auto;
+ padding: 0 15px;
+ }
 
- .ta-app-wrapper .cards {
+ .topnav {
+  width: calc(100% - 275px);
+  height: 75px;
+  background-color: rgba(0, 0, 8, 0.2);
+  position: fixed;
+  right: 0;
+  top: 0;
+  align-items: center;
+}
+
+.ta-app-wrapper .cards {
 display: flex; linear-gradient(to bottom right,#2F3B49 10%, #0F1014);
 background-color:
 flex-align: center;
@@ -80,84 +96,84 @@ display: flex;
 }
 
 h1.recent{
-    display: flex;
-    flex-align: center;
-    color: white;
-    font-size: 24px;
-    padding:1px;
-    margin-top: 450px;
+  display: flex;
+  flex-align: center;
+  color: white;
+  font-size: 24px;
+  padding:1px;
+  margin-top: 450px;
 
 
 }
 
 
 section.right {
-    display:flex;
-    width: 100%;
-    position: relative;
-    flex-align: center;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: -2em;
+  display:flex;
+  width: 100%;
+  position: relative;
+  flex-align: center;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: -2em;
 
 }
 
 .top1{
-    float: left;
-    height: 269px;
+  float: left;
+  height: 269px;
 
 
 }
 
 .top{
-    float: right;
-    padding: 0;
-    margin:0;
+  float: right;
+  padding: 0;
+  margin:0;
 }
 .flex{
-    height: 100%;
-    overflow:hidden;
+  height: 100%;
+  overflow:hidden;
 }
 
 .flex a{
-    width:100%;
+  width:100%;
 }
- a.ta-genre-block{
-    width: 100%;
-    margin-top: 15px;
-    /*background: linear-gradient(transparent, #00c6ff);*/
-    background: linear-gradient(transparent, #2ABB6A);
+a.ta-genre-block{
+  width: 100%;
+  margin-top: 15px;
+  /*background: linear-gradient(transparent, #00c6ff);*/
+  background: linear-gradient(transparent, #2ABB6A);
 
-    padding: 18px 15px;
-    border-radius: 3px;
-    font-weight: 500;
-    margin-bottom: 15px;
-    color: white;
+  padding: 18px 15px;
+  border-radius: 3px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: white;
 }
 .ta-stat-board {
-    margin-top: auto:
-    padding:0;
-    display: flex;
-    flex-justify:top;
+  margin-top: auto:
+  padding:0;
+  display: flex;
+  flex-justify:top;
 
-    }
+  }
 
 .ta-stat-tracks{
- margin-top:0;
- display: flex;
- flex-justify:top;
- overflow: hidden;
- text-align: center;
- text-overflow: ellipsis;
+margin-top:0;
+display: flex;
+flex-justify:top;
+overflow: hidden;
+text-align: center;
+text-overflow: ellipsis;
 
 }
 .ta-stat-board ul{
-    color: white;
-    font-size: 15px;
-    display: flex;
-    flex-align: center;
-    width: 100%;
-    flex-direction: row;
+  color: white;
+  font-size: 15px;
+  display: flex;
+  flex-align: center;
+  width: 100%;
+  flex-direction: row;
 
 
 }
@@ -165,307 +181,308 @@ section.right {
 
 
 .ta-stat-tracks {
-  display: flex;                  /* establish flex container */
-  flex-direction: row;            /* default value; can be omitted */
-  flex-wrap: nowrap;              /* default value; can be omitted */
-  flex-align: center;
-  margin: 0 0 10px;
+display: flex;                  /* establish flex container */
+flex-direction: row;            /* default value; can be omitted */
+flex-wrap: nowrap;              /* default value; can be omitted */
+flex-align: center;
+margin: 0 0 10px;
 
 
 
 }
 .card-stat {
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    width: 30em;
-    justify-content: flex-end;
-    clear: both;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 14px;
-    margin-left: 2px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  width: 30em;
+  justify-content: flex-end;
+  clear: both;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 14px;
+  margin-left: 2px;
 
 
 }
- .card-stat a {
-    margin-right: 120px;
-    margin-left: 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 16px;
-    display: inline-block;
+.card-stat a {
+  margin-right: 120px;
+  margin-left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 16px;
+  display: inline-block;
 
 }
 
 .card-stat a+a {
-  margin-left: -4em;
+margin-left: -4em;
 
 }
 
 .stat-image {
-   width:50px;
-   height: 50px;
-   background-size: cover;
+ width:50px;
+ height: 50px;
+ background-size: cover;
 
 
 }
 li.stat{
-    margin-left: 120px;
+  margin-left: 120px;
 
 }
 li#stat1{
 margin-left: 70px;
 }
 #li{
-    margin-left: 100px;
+  margin-left: 100px;
 }
 button {
-    background-color: Transparent;margin-top;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    color: #aeb1b5;
-    align: center;
-    font-size: 32px;
+  background-color: Transparent;margin-top;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  color: #aeb1b5;
+  align: center;
+  font-size: 32px;
 
 }
 a.show {
-    margin-right: .5em;
-    font-weight: 500;
-    color: #d4d6d9;
+  margin-right: .5em;
+  font-weight: 500;
+  color: #d4d6d9;
 }
 
 a.show:hover{
-    color: white;
+  color: white;
 }
 button:hover {
-    color: white;
+  color: white;
 }
+/*span{
+  font-size: 32px;
+  letter-spacing: -10px;
 
-span{
-    font-size: 32px;
-    letter-spacing: -10px;
-
-}
+}*/
 
 .recent {
-  margin-top:0px;
-  font-size:28px;
-  font-weight: 500;
-  color: white;
-  overflow: hidden;
-  white-space: nowrap;
+margin-top:0px;
+font-size:28px;
+font-weight: 500;
+color: white;
+overflow: hidden;
+white-space: nowrap;
 }
 .card {
-  display: grid;
-  grid-template-columns: 200px;
-  grid-template-rows: 210px; 3px; 10px;
-  height: 200px;
-  width: 150px;
-  grid-template-areas: "image" "text"  "stats";
-  border-radius: 18px;
-  grid-space: 20px;
-  background-color: rgba(0, 0, 8, 0.2);
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
-  font-family: roboto;
-  text-align: center;
-  white-space: nowrap;
-  position: relative;
-  overflow-y: auto;
-  margin: .3em;
+display: grid;
+grid-template-columns: 200px;
+grid-template-rows: 210px; 3px; 10px;
+height: 200px;
+width: 150px;
+grid-template-areas: "image" "text"  "stats";
+border-radius: 18px;
+grid-space: 20px;
+background-color:rgba(0, 0, 8, 0.2);
+box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+font-family: roboto;
+text-align: center;
+white-space: nowrap;
+position: relative;
+overflow-y: auto;
+margin: .3em;
 
 }
+
+/*new class set in every card to change the background colr of the card*/
+
+.card.set{
+  background-color:rgba(0, 0, 8, 0.2);
+}
 .card-image {
-  grid-area: image;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  background-size: cover;
-  position: absolute;
-  overflow: hidden;
+grid-area: image;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+background-size: cover;
+position: absolute;
+overflow: hidden;
 
 }
 /*style for asset button*/
 
 .hover {
-    width: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    flex-display:row;
-    justify-content: center;
-    flex-align: center;
-    flex-justify: center;
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(black, .6);
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-display:row;
+  justify-content: center;
+  flex-align: center;
+  flex-justify: center;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(black, .6);
 }
 
- button.ta-play span, button.ta-play-active span{
-    display:flex;
-    width: 50px;
-    height: 50px;
-    border: 1px solid #cbcdd1;
-    border-radius: 50%;
-    color: white;
-    justify-content: center;
-    flex-align: center;
-    align-items: center;
-    margin-bottom: 25px;
+button.ta-play span, button.ta-play-active span{
+  display:flex;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #cbcdd1;
+  border-radius: 50%;
+  color: white;
+  justify-content: center;
+  flex-align: center;
+  align-items: center;
+  margin-bottom: 25px;
 
 }
 
 button.ta-play-active span{
-    background-color: white;
-    color: #0955ed;
+  background-color: white;
+  color: #0955ed;
 }
 
 
- .playing .image  .hover {
-   background-color: rgba(0, 0, 255, 0.2);
-   background-size: 120px;
+.playing .image  .hover {
+ background-color: rgba(0, 0, 255, 0.2);
+ background-size: 120px;
 }
 
 .hover
 .card-text {
-  grid-area: text;
-  margin: 1px;
-  text-align: left;
-  padding: 2px;
+grid-area: text;
+margin: 1px;
+text-align: left;
+padding: 2px;
 
 }
 
 .card-text .username {
-  color: #949494;
-  font-size:14px;
-  font-weight: 300;
-  left: 0;
+color: #949494;
+font-size:14px;
+font-weight: 300;
+left: 0;
 
 }
 
 a.username:hover, a.username:active {
-    color: #44c1ff;
-    }
+  color: #44c1ff;
+  }
 
 .card-text .title {
-  margin-top:0px;
-  font-size:16px;
-  font-weight: 500;
-  color: white;
-  overflow: hidden;
-  white-space: nowrap;
+margin-top:0px;
+font-size:16px;
+font-weight: 500;
+color: white;
+overflow: hidden;
+white-space: nowrap;
 }
 a.title:hover, a.title:active {
-    color: #44c1ff;
-    }
+  color: #44c1ff;
+  }
 .card-stats {
-  grid-area: stats;
-  display: block;
-  size: 3px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background: rgb(255, 7, 110);
+grid-area: stats;
+display: block;
+size: 3px;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+background: rgb(255, 7, 110);
 }
 
 .card-stats .stat {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+color: white;
+padding:3px;
+}
+.topnav {
+  width: calc(100% - 275px);
+  height: 75px;
+  background-color:rgba(0, 0, 8, 0.2);
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+
+aside {
+  width: 275px;
+  height: 100%;
+  background-color: rgba(0, 0, 8, 0.2);
+  padding: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+ .bread{
+  font-size: 18px;
+ }
+ ul{
+      list-style-type: none;
+      display: block
+      li {
+         a {
+         font-size: 30px;
+         text-decoration: none;
+         }
+      }
+  }
+}
+a {
+  text-decoration: none;
+  display: flex;
+  font-content: 500;
+  align-items: center;
+  color: #777;
+
+}
+
+.links .material-icons {
+  margin-right: 15px;
+  letter-spacing: 1px;
+  font-size: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 
-  color: white;
-  padding:3px;
-}
-.topnav {
-    width: calc(100% - 275px);
-    height: 75px;
-    background-color: black;
-    position: fixed;
-    right: 0;
-    top: 0;
 }
 
-/*.topnav {
-  overflow: hidden;
-  background-color: blue;
-  flex-align: center;
-}*/
-aside {
-    width: 275px;
-    height: 100%;
-    background-color: rgba(0, 0, 8, 0.2);
-    padding: 30px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-   .bread{
-    font-size: 18px;
-   }
-   ul{
-        list-style-type: none;
-        display: block
-        li {
-           a {
-           font-size: 30px;
-           text-decoration: none;
-           }
-        }
-    }
+li  {
+  list-style: none;
+  margin: 20px 0;
 }
- a {
-    text-decoration: none;
-    display: flex;
-    font-content: 500;
-    align-items: center;
-    color: #777;
-
- }
-
-  .links .material-icons {
-    margin-right: 15px;
-    letter-spacing: 1px;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
- }
-
- li  {
-    list-style: none;
-    margin: 20px 0;
- }
 
 a ion-icon {
-  font-size: 24px;
-  margin-right: 12px;
+font-size: 24px;
+margin-right: 12px;
 }
 
 
 .bread {
-    color: white;
-    font-weight: 500;
-    font-size: 20px;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 
 aside ul{
-        list-style-type: none;
-        display: block;
-        margin-bottom: 60px;
+      list-style-type: none;
+      display: block;
+      margin-bottom: 60px;
 }
 
 aside a:hover{
-    color: white;
+  color: white;
 }
 aside .active {
-    color: #44c1ff;
+  color: #44c1ff;
 
 }
 
@@ -473,109 +490,487 @@ aside .active {
 player styling*/
 
 #ta-player {
-     width: 100%;
-     height:90px;
-     background-color: white;
-     position: fixed;
-     bottom: 0;
-     left: 0;
-     z-index: 10;
-     padding:15px 30px;
+   width: 100%;
+   height:90px;
+   background-color: white;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   z-index: 10;
+   padding:15px 30px;
 }
 .ta-player-container{
-    width: 100%;
-    height: 100%;
-    display:flex;
-    flex-direction:row;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  flex-direction:row;
 
 }
 
 .ta-artwork{
-    margin-right:30px;
+  margin-right:30px;
 }
 
 .ta-artwork span {
-    background-size: cover;
-    background-position:center;
-    padding-bottom: 100%;
-    display:block;
+  background-size: cover;
+  background-position:center;
+  padding-bottom: 100%;
+  display:block;
 }
 
 .ta-meta {
 
-    width:6.8em;
-    margin-left:70px;
-    margin-top:-70px;
-    display:flex;
-    text-align: center;
-    flex-direction: column;
-    flex-align:center;
-    justify-items: center;
+  width:6.8em;
+  margin-left:70px;
+  margin-top:-70px;
+  display:flex;
+  text-align: center;
+  flex-direction: column;
+  flex-align:center;
+  justify-items: center;
 
 
 }
 .ta-meta a.title {
-    font-size: 18px;
-    fon-weight:500;
-    color: #174778;
+  font-size: 18px;
+  fon-weight:500;
+  color: #174778;
 }
 
 .ta-meta a.username {
-    font-size: 14px;
-    font-weight: 500;
-    color:#949494;
+  font-size: 14px;
+  font-weight: 500;
+  color:#949494;
 }
 a.title:hover{
-    color: #0a7ff5;
-    text-decoration: none;
+  color: #0a7ff5;
+  text-decoration: none;
 }
- a.username:hover{
-    color: #434445;
-    text-decoration: none;
+a.username:hover{
+  color: #434445;
+  text-decoration: none;
 }
- .ta-meta a {
-    margin-top: 20px;
-    margin-bottom: -2.8em;
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 13px;
+.ta-meta a {
+  margin-top: 20px;
+  margin-bottom: -2.8em;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 13px;
 
 
 }
 
 section.ta-player-controls{
-    flex:2;
-    width: 500px;
+  flex:2;
+  width: 500px;
 
 }
-#aplayer{
-    position: fixed;
-    background-repeat: none;
-    bottom: -100%;
-    left: 0;
-    width:100%;
-    margin: 0;
-    box-shadow: 0 -2px 2px #dadada;
-    background- color: #fff;
-    transition: all ease 0.5s;
+/*#aplayer{
+  position: fixed;
+  background-repeat: none;
+  bottom: -100%;
+  left: 0;
+  padding:0;
+  width:100%;
+  margin: 0;
+  box-shadow: 0 -2px 2px #dadada;
+  background- color: #fff;
+  transition: all ease 0.5s;
+}*/
+/* TODO Most of the new style code will be found below */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Abel", sans-serif;
+  box-sizing: border-box;
 }
 
-.ta-player-progress-wrapper{
-    width:100%;
-    height:5px;
-    display: flex;
-    color:red;
+.main-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
 }
 
-.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded{
-    background: #e0e0e0;
-    height:4px;
-}
-.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played{
-    height: 4px;
-    background-color: #2196F3 !important;
+#jp_container {
+  flex: 0 0 75px;
+  width: 100%;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+  background: white;
 }
 
-.aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb{
-    background-color: #2196F3 !important;
+.jp-jplayer {
+  /* flex: 0 0 30%;
+  height: 100%; */
+  position: relative;
 }
+
+.jp-jplayer::before {
+  content: "\f001";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  opacity: 0.3;
+}
+
+.jp-jplayer img {
+  object-fit: cover;
+}
+
+/* ! STATES SECTION */
+
+.state-playing .jp-play {
+  display: none;
+}
+.state-playing .jp-pause {
+  display: inline-block;
+}
+.state-seeking {
+}
+.state-muted .jp-mute {
+  display: none;
+}
+.state-looped .jp-repeat-off {
+  color: rgb(161, 196, 253);
+}
+.state-full-screen {
+}
+.state-no-volume {
+}
+
+.state-playlist .jp-show-playlist {
+  display: none !important;
+}
+
+.state-playlist .jp-hide-playlist {
+  display: initial !important;
+}
+
+.state-playlist .jp-playlist {
+  height: calc(100vh - 100px) !important;
+  overflow-y: auto !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* ! END OF STATE SECTION */
+
+.jp-state-shuffled .jp-shuffle-off {
+  color: rgb(161, 196, 253);
+  display: flex !important;
+}
+
+.jp-state-shuffled .jp-shuffle {
+  display: none !important;
+}
+
+.jp-gui {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.jp-gui .interface {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.jp-gui .interface .left {
+  flex: 0 0 30%;
+  display: flex;
+}
+
+.jp-gui .interface .left .details {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.jp-gui .interface .left .details .jp-title {
+  font-family: "Lexend", sans-serif;
+}
+
+.jp-gui .interface .left .details > div:not(:first-child) {
+  margin-top: 7px;
+}
+
+.jp-gui .interface .left .details .artist {
+  font-family: "Damion", cursive;
+}
+
+.jp-gui .middle {
+  flex: 0 0 40%;
+  margin: 0 auto 0 20px;
+}
+
+.jp-gui .middle .jp-progress {
+  margin-top: 10px;
+  height: 5px;
+}
+
+.jp-gui .middle .jp-progress .jp-seek-bar {
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.jp-gui .middle .jp-progress .jp-seek-bar .jp-play-bar {
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(161, 196, 253) 0%,
+    rgb(194, 233, 251) 100%
+  );
+  border-radius: 30px;
+}
+
+.jp-gui .middle .jp-progress .jp-time {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Iceberg", cursive;
+}
+
+.jp-gui .middle .jp-progress .jp-time > div {
+  font-family: "Iceberg", cursive;
+}
+.jp-gui .middle .controls-holder {
+  margin-top: 10px;
+}
+
+.jp-gui .middle .controls-holder .controls {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jp-gui .middle .controls-holder button {
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.1);
+  font-size: 13px;
+}
+.jp-gui .middle .controls-holder button.main {
+  border-radius: 50px;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  color: rgb(161, 196, 253);
+}
+
+.jp-gui .middle .controls-holder button.change {
+  border-radius: 50px;
+  height: 30px;
+  width: 30px;
+}
+
+.jp-gui .middle .controls-holder button.toggle {
+  border-radius: 30px;
+  padding: 5px 10px;
+}
+
+.jp-gui .middle .controls-holder button.jp-shuffle-off {
+  display: none;
+}
+
+.jp-gui .middle .controls-holder button:hover {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.jp-gui .right {
+  overflow: hidden;
+  margin-right: 20px;
+  display: flex;
+}
+
+.jp-gui .right button {
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  padding: 2.5px 10px;
+  margin: 0 5px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.jp-gui .right button:hover {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.jp-gui .right .playlist-options {
+  display: flex;
+  align-items: flex-start;
+}
+
+.jp-gui .right .playlist-options button {
+  margin-top: 10px;
+  margin-right: 10px;
+  /* font-size: 20px; */
+  border-radius: 5px;
+  width: 40px;
+}
+
+.jp-gui .right .playlist-options button.jp-hide-playlist {
+  display: none;
+}
+
+.jp-gui .right .volume-controls {
+}
+
+.jp-gui .right .volume-controls .extremes {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.jp-gui .right .volume-controls .extremes button {
+  font-size: 13px;
+}
+
+.jp-gui .right .jp-volume-bar {
+  margin-top: 10px;
+  height: 5px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.jp-gui .right .jp-volume-bar-value {
+  height: 100%;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(161, 196, 253) 0%,
+    rgb(194, 233, 251) 100%
+  );
+}
+
+.jp-gui .jp-playlist {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  height: 0;
+  padding: 0 20px;
+  overflow: hidden;
+  transition: 0.3s;
+  background: rgba(161, 196, 253, 0.374);
+  min-width: 200px;
+}
+
+.jp-gui .jp-playlist ul {
+  list-style: none;
+  max-height: 100%;
+}
+.jp-gui .jp-playlist ul a {
+  text-decoration: none;
+  color: black;
+  outline: none;
+}
+
+.jp-gui .jp-playlist li {
+  padding: 5px 10px 20px 10px;
+  margin: 5px 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.jp-gui .jp-playlist li:hover {
+  font-weight: 700;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.jp-gui .jp-playlist li a:active {
+  color: rgb(161, 196, 253);
+}
+
+.jp-gui .jp-playlist li .jp-playlist-item {
+  flex: auto;
+}
+
+.jp-gui .jp-playlist li .jp-artist {
+  position: relative;
+  bottom: -90%;
+  float: right;
+  font-size: 13px;
+  color: grey;
+  margin-left: 10px;
+  /* font-family: "Yellowtail", cursive; */
+  font-family: "Damion", cursive;
+}
+
+.jp-gui .jp-playlist li:hover .jp-artist {
+  font-weight: normal;
+}
+
+.jp-gui .jp-playlist li a.jp-playlist-current {
+  font-weight: 700;
+  color: green;
+}
+
+.jp-gui .jp-playlist li .jp-playlist-item-remove {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 50%;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
+}
+
+.jp-gui .jp-playlist li .jp-playlist-item-remove:active {
+  color: rgb(161, 196, 253);
+}
+
+.jp-gui .jp-playlist li .jp-playlist-item-remove:active {
+  color: red;
+}
+
+.jp-gui .jp-playlist li > div {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #00c6ff);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #30ff00);
+}
+
+
+
