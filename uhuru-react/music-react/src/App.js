@@ -21,7 +21,7 @@ function App() {
       <div>
         <Aside />
         <div className="ta-app-wrapper" style={{ paddingLeft: "275px" }}>
-          <Route exact path="/">
+          <Route exact path={["/", "/music"]}>
             <TopNav />
             <TaApp />
           </Route>

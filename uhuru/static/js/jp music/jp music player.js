@@ -201,4 +201,8 @@ $(document).ready(function () {
     var h3 = $(this).parent();
     $(h3).addClass("toggle");
   });
+
+  $(".fa-angle-left").on("click", function (e) {
+    window.history.back();
+  });
 });

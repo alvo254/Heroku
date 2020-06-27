@@ -50,7 +50,7 @@ body #root > div{
   width: 100%;
   height: 100%;
   background-image: linear-gradient(to bottom right,#2F3B49 10%, #0F1014);
-  padding-top: 75px;
+  /* padding-top: 75px; */
   padding-left: 275px;
   overflow: hidden;
   position: relative;
@@ -67,6 +67,7 @@ body #root > div{
   /* overflow-x: hidden; */
  overflow-y: auto;
  padding: 0 15px;
+   padding-top: 75px;
  }
 
  .topnav {
@@ -477,7 +478,7 @@ a {
 
 }
 
-li  {
+aside li  {
   list-style: none;
   margin: 20px 0;
 }
