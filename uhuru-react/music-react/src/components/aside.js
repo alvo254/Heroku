@@ -1,4 +1,12 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+} from "react-router-dom";
 
 function Aside() {
   return (
@@ -36,19 +44,19 @@ function Aside() {
       <ul className="links">
         <div className="bread">My Playlist</div>
         <li>
-          <a href="#">
+          <Link to="/playlist">
             <span className="material-icons">queue_music</span>List 1
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">
+          <Link to="/playlist">
             <span className="material-icons">queue_music</span>List 2
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">
+          <Link to="/playlist">
             <span className="material-icons">queue_music</span>List 3
-          </a>
+          </Link>
         </li>
       </ul>
     </aside>
