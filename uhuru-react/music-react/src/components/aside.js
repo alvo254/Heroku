@@ -3,16 +3,16 @@ import React from "react";
 function Aside() {
   return (
     <aside>
-      <ul class="links">
-        <div class="bread">Music</div>
+      <ul className="links">
+        <div className="bread">Music</div>
         <li>
-          <a href="#" class="active">
-            <span class="material-icons">explore</span>Explore
+          <a href="#" className="active">
+            <span className="material-icons">explore</span>Explore
           </a>
         </li>
         <li>
           <a href="#">
-            <span class="material-icons">grade</span>Trending
+            <span className="material-icons">grade</span>Trending
           </a>
         </li>
         <li>
@@ -22,32 +22,32 @@ function Aside() {
         </li>
         <li>
           <a href="#">
-            <span class="material-icons">library_music</span>Albums
+            <span className="material-icons">library_music</span>Albums
           </a>
         </li>
 
         <li>
           <a href="#">
-            <span class="material-icons">favorite</span>Liked
+            <span className="material-icons">favorite</span>Liked
           </a>
         </li>
       </ul>
 
-      <ul class="links">
-        <dpyiv class="bread">My Playlist</dpyiv>
+      <ul className="links">
+        <div className="bread">My Playlist</div>
         <li>
           <a href="#">
-            <span class="material-icons">queue_music</span>List 1
+            <span className="material-icons">queue_music</span>List 1
           </a>
         </li>
         <li>
           <a href="#">
-            <span class="material-icons">queue_music</span>List 2
+            <span className="material-icons">queue_music</span>List 2
           </a>
         </li>
         <li>
           <a href="#">
-            <span class="material-icons">queue_music</span>List 3
+            <span className="material-icons">queue_music</span>List 3
           </a>
         </li>
       </ul>

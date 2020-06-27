@@ -2,8 +2,16 @@ import React from "react";
 
 function TopNav() {
   return (
-    <div class="topnav">
-      <div style="color:white; margin-right: 15px; float:left; padding:32px 14px; margin-left; 15px">
+    <div className="topnav">
+      <div
+        style={{
+          color: "white",
+          marginRight: "15px",
+          float: "left",
+          padding: "32px 14px",
+          marginLeft: "15px",
+        }}
+      >
         Search
       </div>
     </div>
