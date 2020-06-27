@@ -1,4 +1,12 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+} from "react-router-dom";
 
 function TaApp() {
   return (
@@ -19,21 +27,21 @@ function TaApp() {
           </section>
         </div>
         <div className="ta-genre-block">
-          <a href="" contentEditable="m1">
+          <Link to="/playlist" contentEditable="m1">
             Mood 1
-          </a>
-          <a href="" className="m2">
+          </Link>
+          <Link to="/playlist" className="m2">
             Mood 2
-          </a>
-          <a href="" className="m3">
+          </Link>
+          <Link to="/playlist" className="m3">
             Mood 3
-          </a>
-          <a href="" className="m4">
+          </Link>
+          <Link to="/playlist" className="m4">
             Mood 4
-          </a>
-          <a href="" className="m5">
+          </Link>
+          <Link to="/playlist" className="m5">
             Mood 5
-          </a>
+          </Link>
         </div>
       </div>
       <div className="top column col-6">
@@ -67,9 +75,9 @@ function TaApp() {
               }}
             ></div>
             <div className="card-stat">
-              <a href="" className="title">
+              <Link to="/playlist" className="title">
                 Love Awakens
-              </a>
+              </Link>
               <a href="" className="username">
                 Kanye West
               </a>
@@ -87,9 +95,9 @@ function TaApp() {
               }}
             ></div>
             <div className="card-stat">
-              <a href="" className="title">
+              <Link to="/playlist" className="title">
                 Love Awakens
-              </a>
+              </Link>
               <a href="" className="username">
                 Kanye West
               </a>
@@ -107,9 +115,9 @@ function TaApp() {
               }}
             ></div>
             <div className="card-stat">
-              <a href="" className="title">
+              <Link to="/playlist" className="title">
                 Love Awakens
-              </a>
+              </Link>
               <a href="" className="username">
                 Kanye West
               </a>
@@ -127,9 +135,9 @@ function TaApp() {
               }}
             ></div>
             <div className="card-stat">
-              <a href="" className="title">
+              <Link to="/playlist" className="title">
                 Love Awakens
-              </a>
+              </Link>
               <a href="" className="username">
                 Kanye West
               </a>
@@ -147,9 +155,9 @@ function TaApp() {
               }}
             ></div>
             <div className="card-stat">
-              <a href="" className="title">
+              <Link to="/playlist" className="title">
                 Love Awakens
-              </a>
+              </Link>
               <a href="" className="username">
                 Kanye West
               </a>

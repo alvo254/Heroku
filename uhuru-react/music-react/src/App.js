@@ -5,20 +5,32 @@ import TopNav from "./components/topnav.js";
 import Aside from "./components/aside.js";
 import TaApp from "./components/ta-app.js";
 import Player from "./components/player.js";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+} from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <TopNav />
-      <Aside />
-      <div
-        className="ta-app-wrapper"
-        style={{ paddingTop: "75px", paddingLeft: "275px" }}
-      >
-        <TaApp />
-        <Player />
+    <Router>
+      <div>
+        <TopNav />
+        <Aside />
+        <div
+          className="ta-app-wrapper"
+          style={{ paddingTop: "75px", paddingLeft: "275px" }}
+        >
+          <Route path="/">
+            <TaApp />
+          </Route>
+          <Player />
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
