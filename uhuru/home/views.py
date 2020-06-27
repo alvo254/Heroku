@@ -9,7 +9,9 @@ def index(request):
 
 
 def music(request):
-    return render(request, template_name="music.html")
+    
+    # !return render(request, template_name="music.html")
+    return render(request, template_name="music-react.html")
 
 
 def blog(request):

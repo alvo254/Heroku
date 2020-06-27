@@ -103,6 +103,7 @@ $(document).ready(function () {
         .text();
       var newstring = artist.replace(/by/, "");
       $(".jp-gui .details .jp-artist").text(newstring);
+      $("body").addClass("player-active");
     },
     abort: function () {
       $(".jp-title").text("");
@@ -145,19 +146,22 @@ $(document).ready(function () {
   //       var newstring = artist.replace(/by/, "");
   //       $(".details .artist").text(newstring);
   //     });
-  $(".play-song").on("click", function () {
+  $(".play-song").on("click", function (e) {
+    e.preventDefault();
     myPlaylist.option("autoPlay", true); // Set option
     var song = $(this).attr("data-song");
     myPlaylist.setPlaylist([JSON.parse(song)]);
   });
 
   $(".play-playlist").on("click", function () {
+    e.preventDefault();
     myPlaylist.option("autoPlay", true); // Set option
     var playlist = $(this).attr("data-playlist");
     myPlaylist.setPlaylist(JSON.parse(playlist));
   });
 
   $(".add-playlist").on("click", function () {
+    e.preventDefault();
     myPlaylist.option("autoPlay", true); // Set option
     var ul = $(this).parent();
     var h3 = $(ul).parent();
@@ -171,6 +175,10 @@ $(document).ready(function () {
     myPlaylist.remove();
     $(".jp-title").text("");
     $(".jp-gui .details .jp-artist").text("");
+  });
+
+  $(".jp-stop").on("click", function () {
+    $("body").removeClass("player-active");
   });
 
   // Close the dropdown if the user clicks outside of it
