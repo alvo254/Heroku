@@ -92,20 +92,21 @@
   background: transparent;
 }
 .music-box .fa-ellipsis-v {
-  margin-left: 130px;
-  margin-top: 22px;
+  /* margin-left: 130px; */
+  margin-right: 10px;
   font-weight: normal;
   columns: #e1e1e1;
   cursor: pointer;
 }
 
 .music-info {
-  width: 100px;
+  /* width: 100px; */
   height: 50px;
   display: flex;
+  align-items: center;
 }
 .music-img {
-  width: 50px;
+  flex: 0 0 50px;
   height: 50px;
 }
 
@@ -116,7 +117,7 @@
   padding: 1px;
 }
 .music-name {
-  width: 300px;
+  flex: auto;
   padding: 0 5px;
   height: 50px;
 }

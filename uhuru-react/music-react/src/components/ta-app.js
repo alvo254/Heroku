@@ -442,8 +442,7 @@ class TaApp extends Component {
             <div
               className="image"
               style={{
-                backgroundImage:
-                  "url(http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV)",
+                backgroundImage: "url(/static/images/MoG album art.jpg)",
                 backgroundSize: "cover",
                 width: "100%",
                 height: "100%",
@@ -454,20 +453,20 @@ class TaApp extends Component {
                 href="#"
                 className="title play-song"
                 data-song='{
-      "title": "Pushing Back the dark",
-      "artist": "Josh Wilson",
+      "title": "Omemma",
+      "artist": "Judikay",
       "mp3":
-        "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+        "/static/music/Judikay - Omemma (LIVE).m4a",
       "oga":
-        "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+        "/static/music/Judikay - Omemma (LIVE).m4a",
       "poster":
-        "http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV"
+        "/static/images/MoG album art.jpg"
     }'
               >
-                Pushing Back the Dark
+                Omemma
               </a>
               <a href="#" className="username">
-                Kanye North
+                Judikay
               </a>
             </div>
           </div>
@@ -475,8 +474,7 @@ class TaApp extends Component {
             <div
               className="image"
               style={{
-                backgroundImage:
-                  "url(http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV)",
+                backgroundImage: "url(/static/images/Dwala-Cover-Approved.png)",
                 backgroundSize: "cover",
                 width: "100%",
                 height: "100%",
@@ -487,20 +485,20 @@ class TaApp extends Component {
                 href="#"
                 className="title play-song"
                 data-song='{
-      "title": "Pushing Back the dark",
-      "artist": "Josh Wilson",
+      "title": "Dwala",
+      "artist": "Hle Ntombela",
       "mp3":
-        "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+        "/static/music/HLE - Dwala (Official Live Video).m4a",
       "oga":
-        "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+        "/static/music/HLE - Dwala (Official Live Video).m4a",
       "poster":
-        "http://docs.google.com/uc?export=open&id=1vB7a-dNGlHVgQa4touJrSoq9aMKNIRiV"
+        "/static/images/Dwala-Cover-Approved.png"
     }'
               >
-                Pushing Back the Dark
+                Dwala
               </a>
               <a href="#" className="username">
-                Josh Wilson
+                Hle Ntombela
               </a>
             </div>
           </div>
