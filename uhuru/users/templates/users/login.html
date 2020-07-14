@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/all.min.css" />
+    <link rel="stylesheet" href="/static/css/authentication.css" />
+    <title>iFrz | Login</title>
+  </head>
+
+  <body>
+    <a href="index.html">
+      <div class="icon">
+        <img src="/static/img/pp.jpg" alt="" />
+      </div>
+    </a>
+    <form class="form" method="POST">
+      {% csrf_token %}
+      <h2>Login</h2>
+      <div class="input">
+        {% if form.errors %}
+        <div class="forget error">
+          <p>
+            <i class="fas fa-exclamation-triangle"></i> Your username and
+            password didn't match. Please try again.
+          </p>
+        </div>
+        {% endif %}
+        <div class="inputBox {% if form.errors %}error{% endif %}">
+          <label for="">Email</label>
+          <input
+            type="email"
+            name="username"
+            placeholder="valid@email.com"
+            required
+          />
+        </div>
+        <div class="inputBox {% if form.errors %}error{% endif %}">
+          <label for="">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="......"
+            required
+          />
+        </div>
+        <div class="inputBox">
+          <input type="hidden" name="next" value="{{ next }}" />
+          <input type="submit" value="Sign In" />
+        </div>
+        <div class="forget">
+          <p>
+            Forgot Password? <a href="{% url 'password_reset' %}">Click Here</a>
+          </p>
+          <p>
+            Don't have an account? <a href="{% url 'register' %}">Sign Up</a>
+          </p>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

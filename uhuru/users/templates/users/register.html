@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/all.min.css" />
+    <link rel="stylesheet" href="/static/css/authentication.css" />
+    <title>iFrz | Sign Up</title>
+  </head>
+
+  <body>
+    <a href="index.html">
+      <div class="icon">
+        <img src="/static/img/pp.jpg" alt="" />
+      </div>
+    </a>
+    <form class="form" method="POST">
+      {% csrf_token %}
+      <h2>Sign Up</h2>
+      <div class="input">
+        {% if form.first_name.errors %}
+        <!-- !This is just to stop prettier from formatting and collapsing tempalte tags -->
+        {% for error in form.first_name.errors %}
+        <div class="forget error">
+          <p><i class="fas fa-exclamation-triangle"></i> {{error}}</p>
+        </div>
+        {% endfor %} {% endif %} {% if form.last_name.errors %}
+        <!-- !This is just to stop prettier from formatting and collapsing tempalte tags -->
+        {% for error in form.last_name.errors %}
+        <div class="forget error">
+          <p><i class="fas fa-exclamation-triangle"></i> {{error}}</p>
+        </div>
+        {% endfor %} {% endif %}
+        <div class="two-div-column">
+          <div class="inputBox {% if form.first_name.errors %}error{% endif %}">
+            <label for="">First Name</label>
+            <input
+              type="text"
+              name="first_name"
+              placeholder="John"
+              value="{{form.first_name.value}}"
+              required
+            />
+          </div>
+          <div class="inputBox {% if form.last_name.errors %}error{% endif %}">
+            <label for="">Last Name</label>
+            <input
+              type="text"
+              name="last_name"
+              placeholder="Doe"
+              value="{{form.last_name.value}}"
+              required
+            />
+          </div>
+        </div>
+        {% if u_form.username.errors %}
+        <div class="stop-prettier"></div>
+        {% for error in u_form.nickname.errors %}
+        <div class="forget error">
+          <p><i class="fas fa-exclamation-triangle"></i> {{error}}</p>
+        </div>
+        {% endfor %} {% endif %}
+        <div class="inputBox {% if p_form.nickname.errors %}error{% endif %}">
+          <label for="">Username</label>
+          <input
+            type="text"
+            name="nickname"
+            placeholder="Dough"
+            value="{{p_form.nickname.value}}"
+            required
+          />
+        </div>
+        {% if form.email.errors %} {% for error in form.email.errors %}
+        <div class="forget error">
+          <p><i class="fas fa-exclamation-triangle"></i> {{error}}</p>
+        </div>
+        {% endfor %} {% endif %}
+        <div class="inputBox {% if form.email.errors %}error{% endif %}">
+          <label for="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="valid@email.com"
+            value="{{form.email.value}}"
+            required
+          />
+        </div>
+        {% if form.password1.errors %} {% for error in form.password1.errors %}
+        <div class="forget error">
+          <p><i class="fas fa-exclamation-triangle"></i> {{error}}</p>
+        </div>
+        {% endfor %} {% endif %} {% if form.password2.errors %}
+        <!-- !This is just to stop prettier from formatting and collapsing tempalte tags -->
+        {% for error in form.password2.errors %}
+        <div class="forget error">
+          <p><i class="fas fa-exclamation-triangle"></i> {{error}}</p>
+        </div>
+        {% endfor %} {% endif %}
+        <div class="two-div-column">
+          <div
+            class="inputBox {% if form.password1.errors or form.password2.errors %}error{% endif %}"
+          >
+            <label for="">Password</label>
+            <input
+              type="password"
+              name="password1"
+              placeholder="......"
+              required
+            />
+          </div>
+          <div class="inputBox {% if form.password2.errors %}error{% endif %}">
+            <label for="">Retype Password</label>
+            <input
+              type="password"
+              name="password2"
+              placeholder="......"
+              required
+            />
+          </div>
+        </div>
+        <div class="inputBox">
+          <input type="submit" value="Sign Up" />
+        </div>
+        <div class="forget">
+          <p>Have an account? <a href="{% url 'login' %}">Login</a></p>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

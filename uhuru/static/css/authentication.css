@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Informa W01 Light", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+body .icon {
+  margin-right: 50px;
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon img {
+  height: 100%;
+  width: 100%;
+}
+
+.form {
+  position: relative;
+  width: 400px;
+  padding: 30px 15px 10px 15px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form h2 {
+  color: #000;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.form .input {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.form .input .inputBox {
+  margin: 10px 2.5px;
+}
+
+.form .input .two-div-column {
+  display: flex;
+}
+
+.form .input .inputBox label {
+  display: block;
+  color: #868686;
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.form .input .inputBox input {
+  width: 100%;
+  height: 40px;
+  background: rgb(255, 255, 255);
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  padding: 5px 15px;
+  color: #fff;
+  font-size: 18px;
+  color: #03a9f4;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form .input .inputBox.error input {
+  border: 1px solid red;
+}
+
+.form .input .inputBox input[type="submit"] {
+  cursor: pointer;
+  color: #03a9f4;
+  margin-top: 20px;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 1),
+    2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form .input .inputBox input[type="submit"]:active {
+  margin-top: 20px;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form .input .inputBox input::placeholder {
+  color: #bcdada;
+  font-size: 18px;
+}
+
+.forget {
+  margin-top: 30px;
+}
+
+.forget.error {
+  margin-top: 10px;
+}
+
+.forget p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.forget.error p {
+  margin-bottom: 10px;
+}
+
+.forget.error p i {
+  color: red;
+}
+
+.forget a {
+  color: #03a9f4;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  body .icon {
+    align-items: center;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    padding: 5px;
+  }
+
+  .bg {
+    height: 100%;
+    width: 100%;
+  }
+  .form {
+    position: relative;
+    width: 90%;
+    padding: 30px 15px 10px 15px;
+    background: rgba(255, 255, 255, 0.541);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.8),
+      5px 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+}

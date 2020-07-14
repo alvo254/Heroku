@@ -1,6 +1,6 @@
 from django.db import models
 # from audiofield import AudioField
-import datetime from datetime
+from datetime import datetime
 
 
 class Album(models.Model):
@@ -19,33 +19,33 @@ class Song(models.Model):
 
 class AppItem(models.Model):
     CHOICES = {
-        "video": "video",
-        "songs": "song",
-        "blog": "blog",
-        "podcast": "podcast",
+        ("video", "video"),
+        ("songs", "song"),
+        ("blog", "blog"),
+        ("podcast", "podcast"),
     }
     item_type = models.CharField(max_length=10, choices=CHOICES)
     date_posted = models.DateTimeField(default=datetime.now)
 
 class VideoItem(models.Model):
     CHOICES = {
-        "sermon": "sermon",
-        "movie": "movie",
-        "program": "program",
-        "production": "production",
+        ("sermon", "sermon"),
+        ("movie", "movie"),
+        ("program", "program"),
+        ("production", "production"),
     }
 
     app_item = models.OneToOneField(AppItem, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     uploader = models.ForeignKey("users.user", on_delete=models.SET_NULL, null=True)
-    uploaded_file = models.FileField(upload="video")
+    uploaded_file = models.FileField(upload_to="video")
     url = models.URLField()
     category = models.CharField(max_length=10, choices=CHOICES)
 
 class VideoCommentItem(models.Model):
     video = models.ForeignKey(VideoItem, on_delete=models.CASCADE)
     remarks = models.TextField()
-    author = models.ForeignKey('users.user')
+    author = models.ForeignKey('users.user', on_delete=models.CASCADE)
 
 
 class SongItem(models.Model):
@@ -56,7 +56,7 @@ class SongItem(models.Model):
     album = models.CharField(max_length=100)
     year = models.IntegerField()
     uploader = models.ForeignKey("users.user", on_delete=models.SET_NULL, null=True)
-    uploaded_file = models.FileField(upload="song")
+    uploaded_file = models.FileField(upload_to="song")
     url = models.URLField()
     play_count = models.IntegerField(default=0)
 
@@ -72,18 +72,18 @@ class BlogItem(models.Model):
 class BlogCommentItem(models.Model):
     blog = models.ForeignKey(BlogItem, on_delete=models.CASCADE)
     remarks = models.TextField()
-    author = models.ForeignKey('users.user')
+    author = models.ForeignKey('users.user', on_delete=models.CASCADE)
     date_posted = models.DateTimeField(default=datetime.now)
 
 class PodcastItem(models.Model):
     app_item = models.OneToOneField(AppItem, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
-    uploaded_file = models.FileField(upload="podcast")
+    uploaded_file = models.FileField(upload_to="podcast")
     url = models.URLField()
     uploader = models.ForeignKey('users.user', on_delete=models.CASCADE)
 
 class  Playlist(models.Model):
-    name = models.CharField(max_length=100)\
+    name = models.CharField(max_length=100)
     user = models.ForeignKey('users.user', on_delete=models.CASCADE)
     app_item = models.ManyToManyField(AppItem)
 
