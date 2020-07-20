@@ -207,16 +207,7 @@ class TaApp extends Component {
               <a
                 href="#"
                 className="title play-song"
-                data-song='{
-      "title": "All I Need",
-      "artist": "Bethu & HPB",
-      "mp3":
-        "/static/music/7.All I Need.mp3",
-      "oga":
-        "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
-      "poster":
-        "https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg"
-    }'
+                data-song="1"
               >
                 All I Need
               </a>
@@ -240,16 +231,7 @@ class TaApp extends Component {
               <a
                 href="#"
                 className="title play-song"
-                data-song='{
-      "title": "We Are Free",
-      "artist": "Bethu & HPB",
-      "mp3":
-        "/static/music/5.We Are Free.mp3",
-      "oga":
-        "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
-      "poster":
-        "https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg"
-    }'
+                data-song="2"
               >
                 We Are Free
               </a>

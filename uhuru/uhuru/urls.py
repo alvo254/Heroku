@@ -17,9 +17,17 @@ from django.conf.urls import include
 
 from django.contrib import admin
 from django.urls import path
+from  rest_framework import routers
+from  home import viewsets
+
+router = routers.DefaultRouter()
+router.register(r'user', viewsets.UserViewSet)
+router.register(r'song', viewsets.SongViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
-    path('user/', include('users.urls'))
+    path('user/', include('users.urls')),
+    path('api/', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

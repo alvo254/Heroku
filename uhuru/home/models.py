@@ -17,15 +17,6 @@ class Song(models.Model):
     def __str__(self):
         return self.song_title
 
-class AppItem(models.Model):
-    CHOICES = {
-        ("video", "video"),
-        ("songs", "song"),
-        ("blog", "blog"),
-        ("podcast", "podcast"),
-    }
-    item_type = models.CharField(max_length=10, choices=CHOICES)
-    date_posted = models.DateTimeField(default=datetime.now)
 
 class VideoItem(models.Model):
     CHOICES = {
@@ -35,12 +26,12 @@ class VideoItem(models.Model):
         ("production", "production"),
     }
 
-    app_item = models.OneToOneField(AppItem, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     uploader = models.ForeignKey("users.user", on_delete=models.SET_NULL, null=True)
     uploaded_file = models.FileField(upload_to="video")
     url = models.URLField()
     category = models.CharField(max_length=10, choices=CHOICES)
+    date_posted = models.DateTimeField(default=datetime.now)
 
 class VideoCommentItem(models.Model):
     video = models.ForeignKey(VideoItem, on_delete=models.CASCADE)
@@ -49,24 +40,28 @@ class VideoCommentItem(models.Model):
 
 
 class SongItem(models.Model):
-    app_item = models.OneToOneField(AppItem, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     artist = models.CharField(max_length=100)
     featuring = models.CharField(max_length=200, blank=True)
     album = models.CharField(max_length=100)
+    album_art = models.FileField(upload_to="album art", default="default art.png", blank=True, null=True)
     year = models.IntegerField()
     uploader = models.ForeignKey("users.user", on_delete=models.SET_NULL, null=True)
-    uploaded_file = models.FileField(upload_to="song")
-    url = models.URLField()
+    uploaded_file = models.FileField(upload_to="song", blank=True, null=True)
+    url = models.URLField(blank=True, null=True)
     play_count = models.IntegerField(default=0)
+    date_posted = models.DateTimeField(default=datetime.now)
+
+    def __str__(self):
+        return f'{self.artist}-{self.title}'
 
 
 class BlogItem(models.Model):
-    app_item = models.OneToOneField(AppItem, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     body = models.TextField()
     author = models.ForeignKey('users.user', on_delete=models.CASCADE)
     date_modified = models.DateTimeField()
+    date_posted = models.DateTimeField(default=datetime.now)
 
 
 class BlogCommentItem(models.Model):
@@ -76,18 +71,35 @@ class BlogCommentItem(models.Model):
     date_posted = models.DateTimeField(default=datetime.now)
 
 class PodcastItem(models.Model):
-    app_item = models.OneToOneField(AppItem, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     uploaded_file = models.FileField(upload_to="podcast")
     url = models.URLField()
     uploader = models.ForeignKey('users.user', on_delete=models.CASCADE)
+    date_posted = models.DateTimeField(default=datetime.now)
 
 class  Playlist(models.Model):
+    CHOICES = {
+        ("video", "video"),
+        ("songs", "song"),
+        ("blog", "blog"),
+        ("podcast", "podcast"),
+    }
+    item_type = models.CharField(max_length=10, choices=CHOICES, default="")
     name = models.CharField(max_length=100)
     user = models.ForeignKey('users.user', on_delete=models.CASCADE)
-    app_item = models.ManyToManyField(AppItem)
+    vidoe_items = models.ManyToManyField(VideoItem)
+    song_items = models.ManyToManyField(SongItem)
+    blog_items = models.ManyToManyField(BlogItem)
+    padcast_items = models.ManyToManyField(PodcastItem)
+    
 
 class Featured(models.Model):
-    app_item = models.OneToOneField(AppItem, on_delete=models.CASCADE)
+    CHOICES = {
+        ("video", "video"),
+        ("songs", "song"),
+        ("blog", "blog"),
+        ("podcast", "podcast"),
+    }
+    item_type = models.CharField(max_length=10, choices=CHOICES, default="")
     date_featured = models.DateField()
     day_count = models.IntegerField()
