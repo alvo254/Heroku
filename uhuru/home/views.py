@@ -18,7 +18,7 @@ def music(request):
 
 
 def blog(request):
-    return render(request, template_name='blog-single.html')
+    return render(request, template_name='blog.html')
 
 
 def about(request):

@@ -12,12 +12,13 @@ from .models import Profile, User
 #from random import randint
 # Create your views here.
 
+
 def register(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
         p_form = ProfileUpdateForm(request.POST)
         if form.is_valid() and p_form.is_valid():
-                user = form.save( commit=False )
+                user = form.save(commit=False)
                 #regex = r'[A-Z][0-9]{2,2}'
                 user.save()
 
@@ -35,7 +36,8 @@ def register(request):
             return render(request, 'users/register.html', context)
     else:
         return render(request, 'users/register.html')
-        
+
+
 @login_required
 def edit_profile(request):
     if request.method == 'POST':
@@ -58,12 +60,14 @@ def edit_profile(request):
     else:
         return redirect('profile')
 
+
 def default(request, filename):
 
-    response = FileResponse( open(f'media/{filename}', 'rb') )
+    response = FileResponse(open(f'media/{filename}', 'rb'))
     return response
 
-def default2(request, folder ,filename):
 
-    response = FileResponse( open(f'media/{folder}/{filename}', 'rb') )
+def default2(request, folder, filename):
+
+    response = FileResponse(open(f'media/{folder}/{filename}', 'rb'))
     return response

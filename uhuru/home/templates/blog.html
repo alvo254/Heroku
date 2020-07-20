@@ -1,284 +1,298 @@
 {% load static %}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    <title>Blog</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">-->
-<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">-->
-<!--    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">-->
+    <link rel="stylesheet" href="{% static '/css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/animate.css' %}">
+    
+    <link rel="stylesheet" href="{% static '/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/magnific-popup.css' %}">
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css.map">
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js" ></script>
-    <title>Online Music</title>
+    <link rel="stylesheet" href="{% static '/css/aos.css' %}">
 
-    <style>
-        body{
-            background-color: #f7f7f7;
-            font-family: 'Open Sans', sans-serif;
-        }
-        img{
-            width:100%;
+    <link rel="stylesheet" href="{% static '/css/ionicons.min.css' %}">
 
-        }
-        .main{
-            padding:40px 0;
-        }
-        .album-poster{
-            position:relative;
-            display:block;
-            border-radius: 3px;
-            overflow:hidden;
-            box-shadow: 0 15px 35px #3d2173a1;
-            transition: all ease 0.4s;
-        }
-        .album-poster:hover{
-            box-shadow: none;
-            transform: scale(0.98) translateY(5px);
-        }
-        h3{
-            font-size: 34px;
-            margin-bottom: 34px;
-            border-bottom: 4px solid #e6e6e6;
-            padding-bottom: 15px;
-        }
-        p{
-            font-size: 15px;
-        }
-        h4{
-            font-size: 16px;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-        #aplayer{
-                position: fixed;
-                background-repeat: none;
-                bottom: -100%;
-                left: 0;
-                width:100%;
-                margin: 0;
-                box-shadow: 0 -2px 2px #dadada;
-                background-color: #fff;
-                transition: all ease 0.5s;
-            }
-        #aplayer.showPlayer{
-            bottom: 0;
-        }
-        span{
-            color: #000 !important;
-            font-size: 16px;
-        }
-        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded{
-            background: #e0e0e0;
-            height:4px;
-        }
-        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played{
-            height: 4px;
-            background-color: #2196F3 !important;
-        }
+    <link rel="stylesheet" href="{% static '/css/boot-strap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static '/css/jquery.timepicker.css' %}">
 
-        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb{
-            background-color: #2196F3 !important;
-        }
-    </style>
+    
+    <link rel="stylesheet" href="{% static '/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static '/css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static '/css/style12.css' %}">
   </head>
   <body>
-    <div class="main">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3>New releases</h3>
-                </div>
-                <div class="col-md-3" >
 
-                    <a href="javascript:void();" class="album-poster" data-switch="1">
-                        <img src="https://i1.sndcdn.com/artworks-000104728925-im0y74-t200x200.jpg" alt="">
-                    </a>
-                    <h4>Lorem ipsum</h4>
-                    <p>lorem ipsum - 2010</p>
-                </div>
-                <div class="col-md-3">
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">iFrz<span>Christian Church</span></a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
 
-                    <a href="javascript:void();" class="album-poster" data-switch="2">
-                        <img src="https://i1.sndcdn.com/artworks-000104728925-im0y74-t200x200.jpg" alt="">
-                    </a>
-                    <h4>Lorem ipsum</h4>
-                    <p>lorem ipsum - 2010</p>
-                </div>
-                <div class="col-md-3">
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="ministry.html" class="nav-link">Ministries</a></li>
+	          <li class="nav-item"><a href="sermons.html" class="nav-link">Sermons</a></li>
+	          <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+	          <li class="nav-item active"><a href="blog.html" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
 
-                    <a href="javascript:void();" class="album-poster" data-switch="3">
-                        <img src="https://i1.sndcdn.com/artworks-000104728925-im0y74-t200x200.jpg" alt="">
-                    </a>
-                    <h4>Lorem ipsum</h4>
-                    <p>lorem ipsum - 2010</p>
-                </div>
-                <div class="col-md-3">
-
-                    <a href="javascript:void();" class="album-poster" data-switch="4">
-                        <img src="https://i1.sndcdn.com/artworks-000104728925-im0y74-t200x200.jpg" alt="">
-                    </a>
-                    <h4>Lorem ipsum</h4>
-                    <p>lorem ipsum - 2010</p>
-                </div>
-                <div class="col-md-3">
-
-                    <a href="javascript:void();" class="album-poster" data-switch="5">
-                        <img src="https://i1.sndcdn.com/artworks-000104728925-im0y74-t200x200.jpg" alt="">
-                    </a>
-                    <h4>Lorem ipsum</h4>
-                    <p>lorem ipsum - 2010</p>
-                </div>
-                <div class="col-md-3">
-
-                    <a href="javascript:void();" class="album-poster" data-switch="6">
-                        <img src="https://i1.sndcdn.com/artworks-000104728925-im0y74-t200x200.jpg" alt="">
-                    </a>
-                    <h4>Lorem ipsum</h4>
-                    <p>lorem ipsum - 2010</p>
-                </div>
-                <div class="col-md-3">
-
-                    <a href="javascript:void();" class="album-poster" data-switch="1">
-                        <img src="https://i1.sndcdn.com/artworks-000104728925-im0y74-t200x200.jpg" alt="">
-                    </a>
-                    <h4>Lorem ipsum</h4>
-                    <p>lorem ipsum - 2010</p>
-                </div>
-                <div class="col-md-3">
-
-                    <a href="javascript:void();" class="album-poster" data-switch="2">
-                        <img src="https://i1.sndcdn.com/artworks-000104728925-im0y74-t200x200.jpg" alt="">
-                    </a>
-                    <h4>Lorem ipsum</h4>
-                    <p>lorem ipsum - 2010</p>
-                </div>
-
-
-
-
-
-
-
-
-
-
-            </div>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <h3>Coming soon</h3>
-                </div>
-                <div class="col-md-2">
-                    <a href="#" class="album-poster">
-                        <img src="https://i1.sndcdn.com/artworks-000233434893-n4xs0d-t200x200.jpg" alt="">
-                    </a>
-                    <h4>Lorem ipsum</h4>
-                </div>
-                <div class="col-md-2">
-                    <a href="#" class="album-poster">
-                        <img src="https://i1.sndcdn.com/artworks-000233434893-n4xs0d-t200x200.jpg" alt="">
-                    </a>
-                    <h4>Lorem ipsum</h4>
-                </div>
-                <div class="col-md-2">
-                    <a href="#" class="album-poster">
-                        <img src="https://i1.sndcdn.com/artworks-000233434893-n4xs0d-t200x200.jpg" alt="">
-                    </a>
-                    <h4>Lorem ipsum</h4>
-                </div>
-                <div class="col-md-2">
-                    <a href="#" class="album-poster">
-                        <img src="https://i1.sndcdn.com/artworks-000233434893-n4xs0d-t200x200.jpg" alt="">
-                    </a>
-                    <h4>Lorem ipsum</h4>
-                </div>
-                <div class="col-md-2">
-                    <a href="#" class="album-poster">
-                        <img src="https://i1.sndcdn.com/artworks-000233434893-n4xs0d-t200x200.jpg" alt="">
-                    </a>
-                    <h4>Lorem ipsum</h4>
-                </div>
-                <div class="col-md-2">
-                    <a href="#" class="album-poster">
-                        <img src="https://i1.sndcdn.com/artworks-000233434893-n4xs0d-t200x200.jpg" alt="">
-                    </a>
-                    <h4>Lorem ipsum</h4>
-                </div>
-            </div>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('/static/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-2 bread">Blog</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
         </div>
-    </div>
-    <div id="aplayer">
+      </div>
+    </section>
 
-    </div>
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry">
+            	<div class="text">
+                <div class="meta mb-0 pl-md-5">
+                  <div><a href="#">Aug 5, 2019</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+                <h3 class="heading pl-md-5"><a href="#">Know About Our God Who Created This Universe</a></h3>
+              </div>
+              <a href="blog-single.html" class="block-20" style="background-image: url('/static/images/image_1.jpg');">
+              </a>
+              <div class="text py-3">
+                <div class="desc pl-md-5">
+	                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+	              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry">
+            	<div class="text">
+                <div class="meta mb-0 pl-md-5">
+                  <div><a href="#">Aug 5, 2019</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+                <h3 class="heading pl-md-5"><a href="#">Know About Our God Who Created This Universe</a></h3>
+              </div>
+              <a href="blog-single.html" class="block-20" style="background-image: url('/static/images/image_2.jpg');">
+              </a>
+              <div class="text py-3">
+                <div class="desc pl-md-5">
+	                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+	              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry">
+            	<div class="text">
+                <div class="meta mb-0 pl-md-5">
+                  <div><a href="#">Aug 5, 2019</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+                <h3 class="heading pl-md-5"><a href="#">Know About Our God Who Created This Universe</a></h3>
+              </div>
+              <a href="blog-single.html" class="block-20" style="background-image: url('/static/images/image_3.jpg');">
+              </a>
+              <div class="text py-3">
+                <div class="desc pl-md-5">
+	                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+	              </div>
+              </div>
+            </div>
+          </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js" ></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry">
+            	<div class="text">
+                <div class="meta mb-0 pl-md-5">
+                  <div><a href="#">Aug 5, 2019</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+                <h3 class="heading pl-md-5"><a href="#">Know About Our God Who Created This Universe</a></h3>
+              </div>
+              <a href="blog-single.html" class="block-20" style="background-image: url('/static/images/image_4.jpg');">
+              </a>
+              <div class="text py-3">
+                <div class="desc pl-md-5">
+	                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+	              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry">
+            	<div class="text">
+                <div class="meta mb-0 pl-md-5">
+                  <div><a href="#">Aug 5, 2019</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+                <h3 class="heading pl-md-5"><a href="#">Know About Our God Who Created This Universe</a></h3>
+              </div>
+              <a href="blog-single.html" class="block-20" style="background-image: url('/static/images/image_5.jpg');">
+              </a>
+              <div class="text py-3">
+                <div class="desc pl-md-5">
+	                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+	              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ftco-animate">
+            <div class="blog-entry">
+            	<div class="text">
+                <div class="meta mb-0 pl-md-5">
+                  <div><a href="#">Aug 5, 2019</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+                <h3 class="heading pl-md-5"><a href="#">Know About Our God Who Created This Universe</a></h3>
+              </div>
+              <a href="blog-single.html" class="block-20" style="background-image: url('/static/images/image_6.jpg');">
+              </a>
+              <div class="text py-3">
+                <div class="desc pl-md-5">
+	                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+	              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col text-center">
+            <div class="block-27">
+              <ul>
+                <li><a href="#">&lt;</a></li>
+                <li class="active"><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&gt;</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script>
-        $(".album-poster").on('click',function(e){
-            var dataSwitchId = $(this).attr('data-switch');
 
-            ap.list.switch(dataSwitchId);
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Vineyard Church</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">About</h2>
+              <ul class="list-unstyled">
+<!--                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Staff</a></li>-->
+<!--                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Beliefs</a></li>-->
+<!--                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>History</a></li>-->
+<!--                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Mission</a></li>-->
+<!--                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Wedding &amp; Funerals</a></li>-->
+<!--                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Jobs &amp; Internship</a></li>-->
+<!--                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Fellowships</a></li>-->
 
-            ap.play();
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Connect</h2>
+              <ul class="list-unstyled">
+<!--                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Home Groups</a></li>-->
+<!--                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Recovery Groups</a></li>-->
+<!--                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Memberships</a></li>-->
+<!--                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Children &amp; Students</a></li>-->
+<!--                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Volunteer</a></li>-->
+<!--                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Counseling</a></li>-->
+<!--                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Assistance</a></li>-->
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Service Hours</h2>
+              <div class="opening-hours">
+              	<h4>Services Hours</h4>
+              	<p class="pl-3">
+              		<span class="mb-3">Saturday Prayer Meeting &mdash; 10:00 am to 11:30 am</span>
+              		<span>Sunday Service &mdash; 8:30 am to 11:30 am</span>
+              	</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
 
-            $("#aplayer").addClass('showPlayer');
-        });
-        const ap = new APlayer({
-                container: document.getElementById('aplayer'),
-                listFolded: true,
-                audio: [
-        {
-                    name: 'Imba',
-                    artist: 'Bethu & Highest Praise band',
-                    url: "{ % static 'music/3.Utukufu.mp3' %}",
-                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
-                },
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Us</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
 
-               {
-                    name: 'Mungu Wetu',
-                    artist: 'Bethu & Highest Praise band',
-                    url: "{ % static 'music/2.Mungu Wetu.mp3' %}",
-                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
-                },
-                {
-                    name: 'Utukufu',
-                    artist: 'Bethu & Highest Praise band',
-                    url: "{ % static 'music/3.Utukufu.mp3' %}",
-                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
-                },
-                {
-                    name: 'Holy Spirit',
-                    artist: 'Bethu & Highest Praise band',
-                    url: "{ % static 'music/3.Utukufu.mp3' %}",
-                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
-                },
-                {
-                    name: 'We Are Free',
-                    artist: 'Bethu & Highest Praise band',
-                    url: "{ % static 'music/3.Utukufu.mp3' %}",
-                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
-                },
-                {
-                    name: 'All I need',
-                    artist: 'Bethu & Highest Praise band',
-                    url: "{ % static 'music/3.Utukufu.mp3' %}",
-                    cover: 'https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg'
-                },
-            ]
-            });
-    </script>
-</body>
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
+
+  <script src="{% static '/js/jquery_to.min.js' %}"></script>
+  <script src="{% static '/js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static '/js/popper.min.js' %}"></script>
+  <script src="{% static '/js/bootstrap12.min.js' %}"></script>
+  <script src="{% static '/js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static '/js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static '/js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static '/js/owl.caro_usel.min.js' %}"></script>
+  <script src="{% static '/js/jquery.magn_ific-popup.min.js' %}"></script>
+  <script src="{% static '/js/aos.js' %}"></script>
+  <script src="{% static '/js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static '/js/boot-strap-datepicker.js' %}"></script>
+  <script src="{% static '/js/scrollax.min.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static '/js/google-map.js' %}"></script>
+  <script src="{% static '/js/main_for.js' %}"></script>
+    
+  </body>
 </html>
