@@ -150,50 +150,45 @@ $(document).ready(function () {
     e.preventDefault();
     myPlaylist.option("autoPlay", true); // Set option
     var song_id = $(this).attr("data-song");
-    var data_file = "http://127.0.0.1:8000/api/songs/"+song_id+"/";
-            var http_request = new XMLHttpRequest();
-            try{
-               // Opera 8.0+, Firefox, Chrome, Safari
-               http_request = new XMLHttpRequest();
-            }catch (e) {
-               // Internet Explorer Browsers
-               try{
-                  http_request = new ActiveXObject("Msxml2.XMLHTTP");
-					
-               }catch (e) {
-				
-                  try{
-                     http_request = new ActiveXObject("Microsoft.XMLHTTP");
-                  }catch (e) {
-                     // Something went wrong
-                     alert("Your browser broke!");
-                     return false;
-                  }
-					
-               }
-            }
-			
-            http_request.onreadystatechange = function() {
-			
-               if (http_request.readyState == 4  ) {
+    var data_file = "http://127.0.0.1:8000/api/song/" + song_id + "/";
+    var http_request = new XMLHttpRequest();
+    try {
+      // Opera 8.0+, Firefox, Chrome, Safari
+      http_request = new XMLHttpRequest();
+    } catch (e) {
+      // Internet Explorer Browsers
+      try {
+        http_request = new ActiveXObject("Msxml2.XMLHTTP");
+      } catch (e) {
+        try {
+          http_request = new ActiveXObject("Microsoft.XMLHTTP");
+        } catch (e) {
+          // Something went wrong
+          alert("Your browser broke!");
+          return false;
+        }
+      }
+    }
 
-                  // Javascript function JSON.parse to parse JSON data
-                  var jsonObj = JSON.parse(http_request.responseText);
+    http_request.onreadystatechange = function () {
+      if (http_request.readyState == 4) {
+        // Javascript function JSON.parse to parse JSON data
+        var jsonObj = JSON.parse(http_request.responseText);
 
-                  var song = {
-                    "title": jsonObj.title,
-                    "artist": jsonObj.artist,
-                    "mp3": jsonObj.url,
-                    "oga": jsonObj.url,
-                    "poster":
-                      "https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg"
-                  }
-               }
-            }
-			
-            http_request.open("GET", data_file, true);
-            http_request.send();
-    myPlaylist.setPlaylist([song]);
+        var song = {
+          title: jsonObj.title,
+          artist: jsonObj.artist,
+          mp3: jsonObj.url,
+          oga: jsonObj.url,
+          poster:
+            "https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg",
+        };
+        myPlaylist.setPlaylist([song]);
+      }
+    };
+
+    http_request.open("GET", data_file, true);
+    http_request.send();
   });
 
   $(".play-playlist").on("click", function () {

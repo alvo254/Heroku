@@ -8,7 +8,6 @@ import {
   useParams,
 } from "react-router-dom";
 import { appendScript, removeScript } from "./externalScript.js";
-import RecentlyAdded from "./recently-added.js";
 
 class TaApp extends Component {
   componentDidMount() {
@@ -18,7 +17,6 @@ class TaApp extends Component {
   componentWillUnmount() {
     removeScript("/static/js/jp music/jp music player.js");
   }
-
   render() {
     return (
       <div className="ta-app">
@@ -179,6 +177,7 @@ class TaApp extends Component {
             </div>
           </div>
         </div>
+
         <h1 className="recent">Recently Added</h1>
         <section className="right">
           <a href="" className="show">
@@ -192,7 +191,188 @@ class TaApp extends Component {
           </button>
         </section>
 
-        <RecentlyAdded />
+        <div className="cards grid-container">
+          <div className="card set">
+            <div
+              className="image"
+              style={{
+                backgroundImage:
+                  "url(https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg)",
+                backgroundSize: "cover",
+                width: "100%",
+                height: "100%",
+              }}
+            ></div>
+            <div className="card-text">
+              <a
+                href="#"
+                className="title play-song"
+                data-song="1"
+              >
+                All I Need
+              </a>
+              <a href="#" className="username">
+                Bethu & HPB
+              </a>
+            </div>
+          </div>
+          <div className="card set">
+            <div
+              className="image"
+              style={{
+                backgroundImage:
+                  "url(https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg)",
+                backgroundSize: "cover",
+                width: "100%",
+                height: "100%",
+              }}
+            ></div>
+            <div className="card-text">
+              <a
+                href="#"
+                className="title play-song"
+                data-song="2"
+              >
+                We Are Free
+              </a>
+              <a href="#" className="username">
+                Bethu & HPB
+              </a>
+            </div>
+          </div>
+          <div className="card set">
+            <div
+              className="image"
+              style={{
+                backgroundImage:
+                  "url(https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg)",
+                backgroundSize: "cover",
+                width: "100%",
+                height: "100%",
+              }}
+            ></div>
+            <div className="card-text">
+              <a
+                href="#"
+                className="title play-song"
+                data-song='{
+      "title": "Holy Spirit",
+      "artist": "Bethu & HPB",
+      "mp3":
+        "/static/music/4.Holy Spirit Medley.mp3",
+      "oga":
+        "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+      "poster":
+        "https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg"
+    }'
+              >
+                Holy Spirit
+              </a>
+              <a href="#" className="username">
+                Bethu & HPB
+              </a>
+            </div>
+          </div>
+          <div className="card set">
+            <div
+              className="image"
+              style={{
+                backgroundImage:
+                  "url(https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg)",
+                backgroundSize: "cover",
+                width: "100%",
+                height: "100%",
+              }}
+            ></div>
+            <div className="card-text">
+              <a
+                href="#"
+                className="title play-song"
+                data-song='{
+      "title": "Utukufu",
+      "artist": "Bethu & HPB",
+      "mp3":
+        "/static/music/3.Utukufu.mp3",
+      "oga":
+        "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+      "poster":
+        "https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg"
+    }'
+              >
+                Utukufu
+              </a>
+              <a href="#" className="username">
+                Bethu & HPB
+              </a>
+            </div>
+          </div>
+          <div className="card set">
+            <div
+              className="image"
+              style={{
+                backgroundImage:
+                  "url(https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg)",
+                backgroundSize: "cover",
+                width: "100%",
+                height: "100%",
+              }}
+            ></div>
+            <div className="card-text">
+              <a
+                href="#"
+                className="title play-song"
+                data-song='{
+      "title": "Mungu Wetu",
+      "artist": "Bethu & HPB",
+      "mp3":
+        "/static/music/2.Mungu Wetu.mp3",
+      "oga":
+        "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+      "poster":
+        "https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg"
+    }'
+              >
+                Mungu Wetu
+              </a>
+              <a href="#" className="username">
+                Bethu & HPB
+              </a>
+            </div>
+          </div>
+          <div className="card set">
+            <div
+              className="image"
+              style={{
+                backgroundImage:
+                  "url(https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg)",
+                backgroundSize: "cover",
+                width: "100%",
+                height: "100%",
+              }}
+            ></div>
+            <div className="card-text">
+              <a
+                href="#"
+                className="title play-song"
+                data-song='{
+      "title": "Imba",
+      "artist": "Bethu & HPB",
+      "mp3":
+        "/static/music/1.Imba.mp3",
+      "oga":
+        "http://docs.google.com/uc?export=open&id=1iiz-fSgqp2lkvFuQbwH7pTRSkJsyKTS7",
+      "poster":
+        "https://e-cdns-images.dzcdn.net/images/cover/d05345809ef1ead7df7f3ab64b08db4a/500x500.jpg"
+    }'
+              >
+                Imba
+              </a>
+              <a href="#" className="username">
+                Bethu & HPB
+              </a>
+            </div>
+          </div>
+        </div>
         <h1 className="title">Trending</h1>
         <section className="right">
           <a href="" className="show">
