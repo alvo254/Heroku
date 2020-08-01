@@ -1,11 +1,11 @@
 import React, { useEffect, Component } from "react";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
+  // BrowserRouter as Router,
+  // Switch,
+  // Route,
   Link,
-  useRouteMatch,
-  useParams,
+  // useRouteMatch,
+  // useParams,
 } from "react-router-dom";
 import { appendScript, removeScript } from "./externalScript.js";
 
@@ -204,11 +204,7 @@ class TaApp extends Component {
               }}
             ></div>
             <div className="card-text">
-              <a
-                href="#"
-                className="title play-song"
-                data-song="1"
-              >
+              <a href="#" className="title play-song" data-song="1">
                 All I Need
               </a>
               <a href="#" className="username">
@@ -228,11 +224,7 @@ class TaApp extends Component {
               }}
             ></div>
             <div className="card-text">
-              <a
-                href="#"
-                className="title play-song"
-                data-song="2"
-              >
+              <a href="#" className="title play-song" data-song="2">
                 We Are Free
               </a>
               <a href="#" className="username">

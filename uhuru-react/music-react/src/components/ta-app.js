@@ -1,11 +1,11 @@
 import React, { useEffect, Component } from "react";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
+  // BrowserRouter as Router,
+  // Switch,
+  // Route,
   Link,
-  useRouteMatch,
-  useParams,
+  // useRouteMatch,
+  // useParams,
 } from "react-router-dom";
 import { appendScript, removeScript } from "./externalScript.js";
 import RecentlyAdded from "./recently-added.js";

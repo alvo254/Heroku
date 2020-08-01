@@ -146,7 +146,7 @@ $(document).ready(function () {
   //       var newstring = artist.replace(/by/, "");
   //       $(".details .artist").text(newstring);
   //     });
-  $(".play-song").on("click", function (e) {
+  $(document.body).on("click", ".play-song", function (e) {
     e.preventDefault();
     myPlaylist.option("autoPlay", true); // Set option
     var song_id = $(this).attr("data-song");

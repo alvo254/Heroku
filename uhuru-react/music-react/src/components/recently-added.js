@@ -1,11 +1,11 @@
 import React, { useEffect, Component } from "react";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
+  // BrowserRouter as Router,
+  // Switch,
+  // Route,
+  // Link,
+  // useRouteMatch,
+  // useParams,
 } from "react-router-dom";
 import { appendScript, removeScript } from "./externalScript.js";
 
@@ -42,12 +42,11 @@ class RecentlyAdded extends Component {
       );
   }
   render() {
-    console.log("debug");
     const { error, isLoaded, items } = this.state;
     return (
       <div className="cards grid-container">
         {items.map((item) => (
-          <div className="card set">
+          <div key={item.id} className="card set">
             <div
               className="image"
               style={{
@@ -59,7 +58,7 @@ class RecentlyAdded extends Component {
               }}
             ></div>
             <div className="card-text">
-              <a href="#" className="title play-song" data-song="{item.id}">
+              <a href="#" className="title play-song" data-song={item.id}>
                 {item.title}
               </a>
               <a href="#" className="username">
