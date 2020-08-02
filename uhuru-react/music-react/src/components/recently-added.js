@@ -21,7 +21,7 @@ class RecentlyAdded extends Component {
 
   componentDidMount() {
     appendScript("/static/js/jp music/jp music player.js");
-    fetch("http://127.0.0.1:8000/api/song")
+    fetch("http://127.0.0.1:8000/api/recent/")
       .then((res) => res.json())
       .then(
         (result) => {

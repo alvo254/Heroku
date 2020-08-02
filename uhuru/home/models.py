@@ -27,11 +27,13 @@ class VideoItem(models.Model):
     }
 
     title = models.CharField(max_length=200)
-    uploader = models.ForeignKey("users.user", on_delete=models.SET_NULL, null=True)
+    uploader = models.ForeignKey(
+        "users.user", on_delete=models.SET_NULL, null=True)
     uploaded_file = models.FileField(upload_to="video")
     url = models.URLField()
     category = models.CharField(max_length=10, choices=CHOICES)
     date_posted = models.DateTimeField(default=datetime.now)
+
 
 class VideoCommentItem(models.Model):
     video = models.ForeignKey(VideoItem, on_delete=models.CASCADE)
@@ -44,9 +46,11 @@ class SongItem(models.Model):
     artist = models.CharField(max_length=100)
     featuring = models.CharField(max_length=200, blank=True)
     album = models.CharField(max_length=100)
-    album_art = models.FileField(upload_to="album art", default="default art.png", blank=True, null=True)
+    album_art = models.FileField(
+        upload_to="album art", default="default art.png", blank=True, null=True)
     year = models.IntegerField()
-    uploader = models.ForeignKey("users.user", on_delete=models.SET_NULL, null=True)
+    uploader = models.ForeignKey(
+        "users.user", on_delete=models.SET_NULL, null=True)
     uploaded_file = models.FileField(upload_to="song", blank=True, null=True)
     url = models.URLField(blank=True, null=True)
     play_count = models.IntegerField(default=0)
@@ -70,6 +74,7 @@ class BlogCommentItem(models.Model):
     author = models.ForeignKey('users.user', on_delete=models.CASCADE)
     date_posted = models.DateTimeField(default=datetime.now)
 
+
 class PodcastItem(models.Model):
     title = models.CharField(max_length=200)
     uploaded_file = models.FileField(upload_to="podcast")
@@ -77,21 +82,30 @@ class PodcastItem(models.Model):
     uploader = models.ForeignKey('users.user', on_delete=models.CASCADE)
     date_posted = models.DateTimeField(default=datetime.now)
 
-class  Playlist(models.Model):
+
+class Playlist(models.Model):
     CHOICES = {
         ("video", "video"),
-        ("songs", "song"),
+        ("songs", "songs"),
         ("blog", "blog"),
         ("podcast", "podcast"),
     }
+    CHART_CHOICES = {
+        ("mood", "mood"),
+        ("weekly", "weekly"),
+    }
     item_type = models.CharField(max_length=10, choices=CHOICES, default="")
+    chart = models.CharField(max_length=10, choices=CHART_CHOICES, default="")
     name = models.CharField(max_length=100)
     user = models.ForeignKey('users.user', on_delete=models.CASCADE)
-    vidoe_items = models.ManyToManyField(VideoItem)
-    song_items = models.ManyToManyField(SongItem)
-    blog_items = models.ManyToManyField(BlogItem)
-    padcast_items = models.ManyToManyField(PodcastItem)
-    
+    video_items = models.ManyToManyField(VideoItem, blank=True)
+    song_items = models.ManyToManyField(SongItem, blank=True)
+    blog_items = models.ManyToManyField(BlogItem, blank=True)
+    padcast_items = models.ManyToManyField(PodcastItem, blank=True)
+
+    def __str__(self):
+        return self.name
+
 
 class Featured(models.Model):
     CHOICES = {

@@ -21,8 +21,12 @@ from  rest_framework import routers
 from  home import viewsets
 
 router = routers.DefaultRouter()
-router.register(r'user', viewsets.UserViewSet)
 router.register(r'song', viewsets.SongViewSet)
+router.register(r'user', viewsets.UserViewSet)
+router.register(r'mood-playlists', viewsets.MoodPlaylistViewSet)
+router.register(r'weekly-playlists', viewsets.WeeklyPlaylistViewSet, "weekly")
+router.register(r'recent', viewsets.RecentViewSet, "recent")
+router.register(r'trending', viewsets.TrendingViewSet, "trending")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
